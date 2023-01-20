@@ -1,0 +1,17 @@
+<header class="align-items-center d-flex"><span class="fw-bold" style="color: #fad110">OK$ One Stop Mart</span>
+  <mat-icon class="m-0" type="button" mat-button (click)="drawer.toggle()" style="color: #fad110">menu</mat-icon>
+</header>
+
+
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+      <app-simple-layout-sidebar></app-simple-layout-sidebar>
+  </mat-drawer>
+
+  <div class="example-sidenav-content" style="display: block;">
+
+    <router-outlet></router-outlet>
+
+  </div>
+</mat-drawer-container>

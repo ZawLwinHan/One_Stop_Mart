@@ -1,0 +1,13 @@
+<div class="confirm_dialog">
+  <div class="m-5">
+    <img src={{data.image}} alt="" style="width: 35px;">
+
+    <h3>{{data.message}}</h3>
+    <div>
+        <button style="margin-right: 15px;" (click)="confirmtask()" class="yesBtn">{{data.confirmButtonText}}</button>
+        <button (click)="onDismiss()" class="noBtn">{{data.cancelButtonText}}</button>
+    </div>
+  </div>
+
+</div>
+
