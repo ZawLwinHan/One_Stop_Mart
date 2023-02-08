@@ -29,6 +29,10 @@ const routes: Routes = [
       loadChildren: () => import('./components/user-role-master/user-role-master.module').then(m => m.UserRoleMasterModule)
     },
     {
+      path: 'approveConfig',
+      loadChildren: () => import('./components/approval-configuration/approval-configuration.module').then(m => m.ApprovalConfigurationModule)
+    },
+    {
       path: 'ChangePassword',
       loadChildren: () => import('./components/change-password/change-password.module').then(m => m.ChangePasswordModule)
     },

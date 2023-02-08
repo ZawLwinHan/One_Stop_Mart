@@ -1,0 +1,125 @@
+<div class="container-fluid p-3">
+  <div class="row">
+    <div style="border-bottom: 1px solid #D4D6D8;">
+      <button mat-raised-button class="menu-NavBar nav-active" [routerLink]="'../../approveConfig'">Register New User</button>
+      <button mat-raised-button class="menu-NavBar" [routerLink]="'device-authorization-user'">Device Authorization</button>
+      <button mat-raised-button class="menu-NavBar" [routerLink]="'device-authorization-user'">Transaction Amount</button>
+    </div>
+    <div class="py-3 d-block  d-md-flex justify-content-between align-items-center">
+      <div class="breadcrumbText">
+        <span class="backBreadCrumb">Approval Configuration</span>
+        <span> > </span>
+        <span>Register New User</span>
+      </div>
+      <div class=" d-block d-md-flex justify-content-between align-items-center pt-md-0 pt-3">
+        <div class="search-form">
+          <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
+        </div>
+        <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
+             aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
+             [routerLink]="'./create-register-user'">
+        <img src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
+             aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
+             [routerLink]="'./edit-register-user'">
+        <img src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
+             aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link">
+        <img  class="crud-btns" matTooltip="Filter"
+              aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Filter.svg" alt="" >
+        <img class="crud-btns" matTooltip="Excel Download"
+             aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Download%20Excel.svg" alt="">
+      </div>
+    </div>
+    <!-- table -->
+    <div class="secondary-table-pagination">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()"
+                          [aria-label]="checkboxLabel()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row" class="">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)"
+                          [aria-label]="checkboxLabel(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="companyName">
+          <th mat-header-cell *matHeaderCellDef> Company Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.companyName}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="shopName">
+          <th mat-header-cell *matHeaderCellDef> Shop Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.shopName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="approvalUserName">
+          <th mat-header-cell *matHeaderCellDef> Approval User Name </th>
+          <td style="text-align: center;" mat-cell *matCellDef="let element"> {{element.approvalUserName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="approvalUserNo">
+          <th mat-header-cell *matHeaderCellDef> Approval User Mobile Number </th>
+          <td style="text-align: center;" mat-cell *matCellDef="let element"> {{element.approvalUserNo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="approvalUserEmail">
+          <th mat-header-cell *matHeaderCellDef> Approval User Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.approvalUserEmail}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="isCounter">
+          <th mat-header-cell *matHeaderCellDef> All Counter </th>
+          <td mat-cell *matCellDef="let element" class="{{element.isCounter==true? 'text-primary':'text-danger'}}">{{element.isCounter==true? 'Yes':'No'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="isActive">
+          <th mat-header-cell *matHeaderCellDef> Is Active </th>
+          <td mat-cell *matCellDef="let element" class="{{element.isActive==true? 'text-primary':'text-danger'}}">{{element.isActive==true? 'Yes':'No'}}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="dateTime">
+          <th mat-header-cell *matHeaderCellDef> Created Date & Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.dateTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="updateTime">
+          <th mat-header-cell *matHeaderCellDef> Updated Date & Time </th>
+          <td mat-cell *matCellDef="let element"> {{element.updateTime}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="createdUserName">
+          <th mat-header-cell *matHeaderCellDef> Created User Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.createdUserName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="updatedUserName">
+          <th mat-header-cell *matHeaderCellDef> Updated User Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.updatedUserName}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns,sticky:true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+
+    </div>
+
+    <mat-toolbar>
+      <mat-paginator class="mat-paginator-user-role-permission" [pageSizeOptions]="[20, 25, 50, 100]" showFirstLastButtons
+                     aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </mat-toolbar>
+  </div>
+</div>

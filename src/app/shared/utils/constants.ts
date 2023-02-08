@@ -42,6 +42,24 @@ export const menuItems = [
         children: []
       },
       {
+        displayName: 'Register Dummy Merchant Number',
+        route: 'registerDummyMerchantNo',
+        iconName: '../../../../assets/img/side_bar_icons/User Role Permission.svg',
+        children: []
+      },
+      {
+        displayName: 'Shop Master',
+        route: 'shopMaster',
+        iconName: '../../../../assets/img/side_bar_icons/User Role Permission.svg',
+        children: []
+      },
+      {
+          displayName: 'Approval Configuration',
+          route: 'approveConfig',
+          iconName: '../../../../assets/img/side_bar_icons/User Role Permission.svg',
+          children: []
+        },
+      {
         displayName: 'Change Password',
         route: 'ChangePassword',
         iconName: '../../../../assets/img/side_bar_icons/Change Password.svg',

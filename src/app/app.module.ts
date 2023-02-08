@@ -32,6 +32,7 @@ import { ConfirmAlertComponent } from './components/modal/confirm-alert/confirm-
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,

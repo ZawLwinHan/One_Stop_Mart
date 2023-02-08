@@ -1,8 +1,46 @@
-<header class="align-items-center d-flex"><span class="fw-bold" style="color: #fad110">OK$ One Stop Mart</span>
-  <mat-icon class="m-0" type="button" mat-button (click)="drawer.toggle()" style="color: #fad110">menu</mat-icon>
+<header class="align-items-center d-flex justify-content-between">
+  <div class="p-4 d-flex align-items-center">
+    <img src="assets/img/icon/OK$%20logo%20.svg" alt="" style="width: 30px">
+    <span class="fw-bold" style="color: #fad110">- POS Management</span>
+    <mat-icon class="mt-2" type="button" mat-button (click)="drawer.toggle()" style="color: #fad110">menu</mat-icon>
+  </div>
+  <div class="side_nav_header me-md-5">
+    <button mat-button [matMenuTriggerFor]="beforeMenu">
+      <img src="assets/img/new_icon/Notification%20.svg" width="25" alt="">
+    </button>
+    <mat-menu class="notifications_box" #beforeMenu="matMenu" xPosition="before" style="float:right;">
+      <button class="notifications" mat-menu-item>
+        <div>
+              <span class="notification_heading">
+                Report created successfully.
+              </span>
+          <br>
+          <small class="notification_time">29 July 2020 - 02:26 PM</small>
+        </div>
+      </button>
+      <hr>
+      <button class="notifications" mat-menu-item>
+        <div>
+              <span class="notification_heading">
+                Report edited successfully.
+              </span>
+          <br>
+          <small class="notification_time">29 July 2020 - 02:26 PM</small>
+        </div>
+      </button>
+      <hr>
+      <button class="notifications" mat-menu-item>
+        <div>
+              <span class="notification_heading">
+                UserRolePermission edited successfully.
+              </span>
+          <br>
+          <small class="notification_time">29 July 2020 - 02:26 PM</small>
+        </div>
+      </button>
+    </mat-menu>
+  </div>
 </header>
-
-
 
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side" opened>
