@@ -1,15 +1,15 @@
 <div class="main-content container-fluid p-3">
   <div class="row">
     <div style="border-bottom: 1px solid #D4D6D8;">
-      <button mat-raised-button class="menu-NavBar nav-active" [routerLink]="'../../approveConfig'">Register New User</button>
+      <button mat-raised-button class="menu-NavBar" [routerLink]="'../../approveConfig'">Register New User</button>
       <button mat-raised-button class="menu-NavBar" [routerLink]="'../device-authorization-list'">Device Authorization</button>
-      <button mat-raised-button class="menu-NavBar" [routerLink]="'../transaction-amount-list'">Transaction Amount</button>
+      <button mat-raised-button class="menu-NavBar nav-active" [routerLink]="'../transaction-amount-list'">Transaction Amount</button>
     </div>
     <div class="py-3 d-block  d-md-flex justify-content-between align-items-center">
       <div class="breadcrumbText">
         <span class="backBreadCrumb" [routerLink]="'../../approveConfig'">Approval Configuration</span>
         <span> > </span>
-        <span>Create Register New User</span>
+        <span>Edit Transaction Amount</span>
       </div>
     </div>
   </div>
@@ -145,10 +145,16 @@
       </mat-form-field>
     </div>
   </div>
+  <div class="row mt-5">
+    <div class="col-md-4">
+      <input type="checkbox" name="active" value="active" checked class="activeCheckBox">
+      <label for="Is Active">Is Active</label>
+    </div>
+  </div>
 </div>
 <mat-toolbar>
   <div class="button_group">
-    <button class="noBtn" mat-button [routerLink]="'../../approveConfig'">Cancel</button>
-    <button class="yesBtn" mat-button  [routerLink]="'../../approveConfig'">Save</button>
+    <button class="noBtn" mat-button [routerLink]="'../transaction-amount-list'">Cancel</button>
+    <button class="yesBtn" mat-button  [routerLink]="'../transaction-amount-list'">Save</button>
   </div>
 </mat-toolbar>

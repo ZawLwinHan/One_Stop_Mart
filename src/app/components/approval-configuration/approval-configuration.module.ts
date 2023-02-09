@@ -15,9 +15,12 @@ import {FlexModule} from "@angular/flex-layout";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import { EditRegisterUserComponent } from './edit-register-user/edit-register-user.component';
-import { DeviceAuthorizationListComponent } from './device-authorization-list/device-authorization-list.component';
+import { DeviceAuthorizationComponent } from './device-authorization/device-authorization.component';
 import { CreateDeviceAuthorizationComponent } from './create-device-authorization/create-device-authorization.component';
 import { EditDeviceAuthorizationComponent } from './edit-device-authorization/edit-device-authorization.component';
+import { TransactionAmountListComponent } from './transaction-amount-list/transaction-amount-list.component';
+import { CreateTransactionAmountComponent } from './create-transaction-amount/create-transaction-amount.component';
+import { EditTransactionAmountComponent } from './edit-transaction-amount/edit-transaction-amount.component';
 
 
 @NgModule({
@@ -25,9 +28,12 @@ import { EditDeviceAuthorizationComponent } from './edit-device-authorization/ed
     RegisterUserListComponent,
     CreateRegisterUserComponent,
     EditRegisterUserComponent,
-    DeviceAuthorizationListComponent,
+    DeviceAuthorizationComponent,
     CreateDeviceAuthorizationComponent,
     EditDeviceAuthorizationComponent,
+    TransactionAmountListComponent,
+    CreateTransactionAmountComponent,
+    EditTransactionAmountComponent,
   ],
   imports: [
     CommonModule,

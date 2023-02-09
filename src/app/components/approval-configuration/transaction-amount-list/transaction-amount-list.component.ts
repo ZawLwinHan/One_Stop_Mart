@@ -3,11 +3,11 @@ import {MatTableDataSource} from "@angular/material/table";
 import {SelectionModel} from "@angular/cdk/collections";
 
 @Component({
-  selector: 'app-device-authorization-list',
-  templateUrl: './device-authorization-list.component.html',
-  styleUrls: ['./device-authorization-list.component.scss']
+  selector: 'app-transaction-amount-list',
+  templateUrl: './transaction-amount-list.component.html',
+  styleUrls: ['./transaction-amount-list.component.scss']
 })
-export class DeviceAuthorizationListComponent implements OnInit {
+export class TransactionAmountListComponent implements OnInit {
 
   displayedColumns: string[] = ['select',  'companyName', 'shopName', 'approvalUserName', 'approvalUserNo', 'approvalUserEmail',
     'isCounter','isActive', 'dateTime', 'updateTime', 'createdUserName' , 'updatedUserName'];
@@ -19,7 +19,6 @@ export class DeviceAuthorizationListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
@@ -60,6 +59,7 @@ export interface PeriodicElement {
   createdUserName: string;
   updatedUserName: string;
 }
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {  companyName: 'Internet Wallet Myanmar', shopName: '0054 Myin Thar',  approvalUserName:'Aung Myo', approvalUserNo:'+95 09958484545', approvalUserEmail:'aungmyo@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Aung Myo' , updatedUserName: 'Aung Myo'},
   {  companyName: 'One Stop Mart Insein', shopName: '0021 Shwe Bon Thar',  approvalUserName:'Shwe Sin', approvalUserNo:'+95 09958484545', approvalUserEmail:'shwesin@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Shwe Sin' , updatedUserName: 'Shwe Sin'},
