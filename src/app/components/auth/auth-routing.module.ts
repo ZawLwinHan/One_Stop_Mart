@@ -5,6 +5,8 @@ import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ResendOtpComponent } from './resend-otp/resend-otp.component';
+import { OtpCircleComponent } from './otp-circle/otp-circle.component';
+import { EnterOtpComponent } from './enter-otp/enter-otp.component';
 
 
 const routes: Routes = [{
@@ -29,7 +31,16 @@ const routes: Routes = [{
     {
       path: 'resend-otp',
       component: ResendOtpComponent
-    }    
+    } ,
+  
+    {
+      path: 'otp-circle',
+      component: OtpCircleComponent
+    }  ,
+    {
+      path: 'enter-otp',
+      component: EnterOtpComponent
+    } ,    
   ]
 }];
 
