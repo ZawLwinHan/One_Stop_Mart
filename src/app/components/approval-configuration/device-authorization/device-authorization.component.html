@@ -2,14 +2,14 @@
   <div class="row">
     <div style="border-bottom: 1px solid #D4D6D8;">
       <button mat-raised-button class="menu-NavBar" [routerLink]="'../../approveConfig'">Register New User</button>
-      <button mat-raised-button class="menu-NavBar  nav-active" [routerLink]="'device-authorization-user'">Device Authorization</button>
-      <button mat-raised-button class="menu-NavBar" [routerLink]="'device-authorization-user'">Transaction Amount</button>
+      <button mat-raised-button class="menu-NavBar nav-active" [routerLink]="'../device-authorization-list'">Device Authorization</button>
+      <button mat-raised-button class="menu-NavBar" [routerLink]="'../transaction-amount-list'">Transaction Amount</button>
     </div>
     <div class="py-3 d-block  d-md-flex justify-content-between align-items-center">
       <div class="breadcrumbText">
-        <span class="backBreadCrumb">Approval Configuration</span>
+        <span class="backBreadCrumb">Device Authorization</span>
         <span> > </span>
-        <span>Device Authorization</span>
+        <span>Register New User</span>
       </div>
       <div class=" d-block d-md-flex justify-content-between align-items-center pt-md-0 pt-3">
         <div class="search-form">
@@ -17,10 +17,10 @@
         </div>
         <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
-             [routerLink]="'./create-device-authorization'">
+             [routerLink]="'../create-device-authorization'">
         <img src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
-             [routerLink]="'./edit-device-authorization'">
+             [routerLink]="'../edit-device-authorization'">
         <img src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link">
         <img  class="crud-btns" matTooltip="Filter"
@@ -123,4 +123,3 @@
     </mat-toolbar>
   </div>
 </div>
-
