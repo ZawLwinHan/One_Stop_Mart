@@ -33,6 +33,10 @@ const routes: Routes = [
       loadChildren: () => import('./components/approval-configuration/approval-configuration.module').then(m => m.ApprovalConfigurationModule)
     },
     {
+      path: 'ShopMaster',
+      loadChildren: () => import('./components/shop-master/shop-master.module').then(m => m.ShopMasterModule)
+    },
+    {
       path: 'ChangePassword',
       loadChildren: () => import('./components/change-password/change-password.module').then(m => m.ChangePasswordModule)
     },

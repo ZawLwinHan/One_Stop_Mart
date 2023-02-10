@@ -49,7 +49,7 @@ export const menuItems = [
       },
       {
         displayName: 'Shop Master',
-        route: 'shopMaster',
+        route: 'ShopMaster',
         iconName: '../../../../assets/img/side_bar_icons/User Role Permission.svg',
         children: []
       },

@@ -705,10 +705,9 @@ overflow: hidden !important;
   padding: 13px 15px !important;
   font-weight: 500 !important;
   width: 80% !important;
-  border-radius: 25px;
-  border: 1px solid #cccccc !important;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-  background-color: white !important;
+  border-radius: 2px;
+  border: 1px solid #f1f5ff !important;
+  background-color:#f1f5ff !important;
 }
 .select2{
   height: 50px;
@@ -716,10 +715,9 @@ overflow: hidden !important;
   margin-bottom: 10px;
   width: 85% !important;
   padding: 15px 15px;
-  border-radius: 25px;
-  border: 1px solid #cccccc;
-  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #f1f5ff ;
+  background-color:#f1f5ff ;
 
   &:focus{
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
@@ -1005,7 +1003,6 @@ header{
   font-size: 16px;
   color: $black;
   white-space: nowrap;
-  border: 1px solid $white;
   text-align: center;
   font-weight: 700;
   padding: 0px 25px;
@@ -1031,12 +1028,12 @@ table {
   overflow: auto;
 }
 
-.secondary-table-pagination td{border: 1px solid $primary-light;
-}
+// .secondary-table-pagination td{border: 1px solid $primary-light;
+// }
 
 .secondary-table-pagination td{
   text-align: center;
-  border-right: 1px solid $primary-light;
+  // border-right: 1px solid $primary-light;
   font-weight: 600;
   padding: 0px 25px !important;
 }
@@ -1096,6 +1093,16 @@ table {
   border:2px solid #fff !important ;
 }
 
+.saveandsend{
+  background: $primary  !important;
+  color: $white;
+  border-radius: 30px !important;
+  font-size: 20px;
+  box-shadow: 0px 8px 15px #888888;
+  margin: 20px;
+  border:2px solid #fff !important ;
+
+}
 .noBtn {
   background: #a30303 !important;
   color: $white;
@@ -1140,3 +1147,7 @@ table {
   padding: 15px !important;
 }
 // Custom Css End //
+
+.mat-drawer-container {
+  background-color: #f1f5ff !important;
+}
