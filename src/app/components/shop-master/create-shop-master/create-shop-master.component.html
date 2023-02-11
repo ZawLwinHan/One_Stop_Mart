@@ -1,5 +1,5 @@
 <div class="main-content p-2">
-    <h4>Create User Role Permission</h4>
+    <h4>Create Shop Master</h4>
     <div class="box-area">
        
         <div class="row">
@@ -17,8 +17,7 @@
                       </mat-form-field>
                     </div>
                   </div>
-                  <mat-option>Consumer Good Myanmar Company </mat-option>
-                  <mat-option>CGM Myanmar</mat-option>
+                  <mat-option *ngFor="let companyname of companynames" [value]="companyname">{{companyname}}</mat-option>
                 </mat-select>
               </div>
               <div class="my-2 col-12 col-md-6 col-lg-4 ">
@@ -59,16 +58,37 @@
             </div>
 
             <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <br>
-                <mat-form-field floatLabel="always">
-                    <mat-label class="label-input">State/Division<span>*</span></mat-label>
-                    <input matInput class="input1" placeholder="Enter State/Division">
-                </mat-form-field>
+              <div>
+                <mat-label for="">State/Division<span>*</span></mat-label>
+              </div>
+              <br>
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+                
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+
+               
+              </mat-select>
             </div>
         </div>
 
         <div class="row">
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
                 <div>
                   <mat-label for="">City<span>*</span></mat-label>
                 </div>
@@ -90,9 +110,8 @@
                         clear</mat-icon>Uncheck All
                     </button>
                   </div>
-                  <mat-option value=1 >Yangon</mat-option>
-                  <mat-option value=2>Bago</mat-option>
-                  <mat-option value=3>Ayeyawady</mat-option>
+                  <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+
                  
                 </mat-select>
               </div>
@@ -118,9 +137,8 @@
                         clear</mat-icon>Uncheck All
                     </button>
                   </div>
-                  <mat-option value=1>Yangon</mat-option>
-                  <mat-option value=2>Bago</mat-option>
-                  <mat-option value=3>Ayeyawady</mat-option>
+                  <mat-option *ngFor="let township  of townships" [value]="township">{{township}}</mat-option>
+
                 </mat-select>
               </div>
               <div class="my-2 col-12 col-md-6 col-lg-4 ">
@@ -164,6 +182,10 @@
                   </mat-form-field>
                   </div>
             </div>
+        </div>
+
+        <div>
+          <button class="saveandsend" mat-button (click)="openDialog()">Add Counter Detail</button>
         </div>
     </div>
 </div>

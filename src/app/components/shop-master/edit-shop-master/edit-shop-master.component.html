@@ -1,1 +1,202 @@
-<p>edit-shop-master works!</p>
+<div class="main-content p-2">
+    <h4>Edit Shop Master</h4>
+    <div class="box-area">
+       
+        <div class="row">
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <div>
+                  <mat-label for="">Select Company Name<span>*</span></mat-label>
+                </div>
+                <br>
+                <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
+                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                    fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                      <mat-form-field appearance="standard">
+                        <input matInput class="select_search_box" placeholder="Enter Keywords">
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <mat-option *ngFor="let companyname of companynames" [value]="companyname">{{companyname}}</mat-option>
+                </mat-select>
+              </div>
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <br>
+                <mat-form-field floatLabel="always">
+                    <mat-label class="label-input">Shop Code<span>*</span></mat-label>
+                    <input matInput class="input1" placeholder="Enter Shop Code">
+                </mat-form-field>
+              </div>
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <br>
+                <mat-form-field floatLabel="always">
+                    <mat-label class="label-input">Shop Name<span>*</span></mat-label>
+                    <input matInput class="input1" placeholder="Enter Shop Name">
+                </mat-form-field>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+              <br>
+              <mat-form-field floatLabel="always">
+                  <mat-label class="label-input">Transaction Amount Limit<span>*</span></mat-label>
+                  <input matInput class="input1" placeholder="Enter Transaction Amount">
+              </mat-form-field>
+            </div>
+            
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+              <br>
+              <mat-form-field floatLabel="always">
+                <mat-label class="label-input">Contact Number<span>*</span></mat-label>
+                <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
+                      &nbsp;<span style="font-size: 14px">+95</span>
+                    </span>
+                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 75% !important;">
+                <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+            </div>
+
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+              <div>
+                <mat-label for="">State/Division<span>*</span></mat-label>
+              </div>
+              <br>
+              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+                
+                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                  fxLayoutAlign="space-between center">
+                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                    <mat-form-field appearance="standard">
+                      <input matInput class="select_search_box" placeholder="Enter Keywords">
+                    </mat-form-field>
+                  </div>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn">
+                    <mat-icon class="secondary-text s-5">
+                      check</mat-icon>Check All
+                  </button>
+                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                    <mat-icon class="secondary-text s-5">
+                      clear</mat-icon>Uncheck All
+                  </button>
+                </div>
+                <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+
+               
+              </mat-select>
+            </div>
+        </div>
+
+        <div class="row">
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <div>
+                  <mat-label for="">City<span>*</span></mat-label>
+                </div>
+                <br>
+                <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                    fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                      <mat-form-field appearance="standard">
+                        <input matInput class="select_search_box" placeholder="Enter Keywords">
+                      </mat-form-field>
+                    </div>
+                    <button fxLayout="row" mat-button class="check_uncheck_btn">
+                      <mat-icon class="secondary-text s-5">
+                        check</mat-icon>Check All
+                    </button>
+                    <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                      <mat-icon class="secondary-text s-5">
+                        clear</mat-icon>Uncheck All
+                    </button>
+                  </div>
+                  <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
+
+                 
+                </mat-select>
+              </div>
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <div>
+                  <mat-label for="">Township<span>*</span></mat-label>
+                </div>
+                <br>
+                <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                    fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                      <mat-form-field appearance="standard">
+                        <input matInput class="select_search_box" placeholder="Enter Keywords">
+                      </mat-form-field>
+                    </div>
+                    <button fxLayout="row" mat-button class="check_uncheck_btn">
+                      <mat-icon class="secondary-text s-5">
+                        check</mat-icon>Check All
+                    </button>
+                    <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                      <mat-icon class="secondary-text s-5">
+                        clear</mat-icon>Uncheck All
+                    </button>
+                  </div>
+                  <mat-option *ngFor="let township  of townships" [value]="township">{{township}}</mat-option>
+
+                </mat-select>
+              </div>
+              <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <br>
+                <mat-form-field floatLabel="always">
+                    <mat-label class="label-input">Enter Road<span>*</span></mat-label>
+                    <input matInput class="input1" placeholder="Enter Road">
+                </mat-form-field>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+            <br>
+              <div class="mb-2 mt-3">
+              <mat-form-field floatLabel="always">
+                  <mat-label class="label-input">Address<span>*</span></mat-label>
+                  <input matInput class="input1" placeholder="Enter Address">
+                  <mat-icon matSuffix></mat-icon>
+              </mat-form-field>
+              </div>
+            </div>
+
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <br>
+                  <div class="mb-2 mt-3">
+                  <mat-form-field floatLabel="always">
+                      <mat-label class="label-input">Lattitude<span>*</span></mat-label>
+                      <input matInput class="input1" placeholder="Enter Lattitude">
+                      <mat-icon matSuffix></mat-icon>
+                  </mat-form-field>
+                  </div>
+            </div>
+            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+                <br>
+                  <div class="mb-2 mt-3">
+                  <mat-form-field floatLabel="always">
+                      <mat-label class="label-input">Longitude<span>*</span></mat-label>
+                      <input matInput class="input1" placeholder="Enter Longitude">
+                      <mat-icon matSuffix></mat-icon>
+                  </mat-form-field>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row p-2">
+            <div class="d-flex">
+              <mat-checkbox [checked]= "myModel" class = "example-margin" >
+              </mat-checkbox>
+              <p class="ps-2">Is Active</p>
+            </div>
+          </div>
+    </div>
+</div>
+<mat-toolbar>
+    <div class="button_group">
+      <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">Cancel</button>
+      <button class="saveandsend" mat-button  [routerLink]="'../../ShopMaster'">Save & Send For Approval</button>
+    </div>
+</mat-toolbar>
+  

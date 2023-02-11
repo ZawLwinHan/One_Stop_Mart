@@ -31,6 +31,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import { ConfirmAlertComponent } from './components/modal/confirm-alert/confirm-alert.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { ShopMasterFilterComponent } from './components/modal/shop-master-filter/shop-master-filter.component';
 
 // @ts-ignore
 @NgModule({
@@ -38,6 +39,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
     AppComponent,
     UserRolePermissionFilterComponent,
     ConfirmAlertComponent,
+    ShopMasterFilterComponent,
   ],
   imports: [
     BrowserModule,

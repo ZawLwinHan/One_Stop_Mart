@@ -1,0 +1,127 @@
+.eyesIcon{
+    position: absolute;
+    right: 120px;
+    top: -22px;
+  }
+  ::placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  ::-moz-placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  ::-webkit-input-placeholder{
+      color: rgba(80, 75, 75, 0.87);
+      font-size: 14px;
+  }
+  .filter_select_header .filter_text {
+    padding: 0 7px;
+  }
+  .filter_select_header .check_uncheck_btn {
+    font-size: 12px;
+    padding: 0 6px;
+  }
+  .filter_select_header {
+    background: #224193;
+    display: flex;
+  }
+  mat-form-field .select_search_box{
+    background: #ffffff !important;
+    border-radius: 30px !important;
+    padding-left: 12px !important;
+    border-top: 0 !important;
+    padding-bottom: 8px !important;
+    padding-top: 4px !important;
+    margin-bottom: 0%;
+  }
+  .filter_select_header {
+    display: flex;
+    place-content: start !important;
+  }
+  
+  ::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+  
+  .mat-toolbar
+  {
+    background-color: #f1f5ff ;
+    display: block !important;
+    text-align: center;
+  }
+  .main-content
+  {
+    height: calc(90vh - 60px);
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: #ffffff;
+  }
+  
+  mat-label span {
+      color: #ff0000 !important;
+  }
+  .upload-image{
+    height: 50px;
+    outline: none;
+    margin-bottom: 7px;
+    margin-top: 10px;
+    padding: 13px 15px;
+    font-weight: 500;
+    width: 85%;
+     border-radius: 25px;
+     border: 1px solid #cccccc;
+     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+     background-color: white;
+  }
+  .mobileInput{
+    position: absolute;
+    top: -40px;
+    z-index: 1;
+    left: 20px;
+  }
+  .label-input{
+    font-size: larger;
+    color: #000;
+  }
+  .profileImage
+  {
+    display: table-cell;
+    height: 160px;
+  }
+  .profileImage img
+  {
+    vertical-align: bottom;
+    margin-top: 30px;
+    height :100px;
+    width: 100px;
+  }
+  
+  .upload
+  {
+  margin-left: -35px !important;
+  vertical-align: middle;
+  }
+  
+  input[type=file]::-webkit-file-upload-button {
+    display: none;
+  }
+  .mat-hint{
+    color: red;
+  }
+  .filterRow{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+  }
+  
+  //Media Query Start
+  @media screen and (max-width: 1551px){
+    .eyesIcon{
+      right: 90px;
+    }
+  }
+  //Media Query End
+  
