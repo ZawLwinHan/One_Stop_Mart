@@ -1007,6 +1007,11 @@ header{
   font-weight: 700;
   padding: 0px 25px;
 }
+@media screen and (max-width: 1551px) {
+  .secondary-table-pagination{
+    height: calc(80vh - 120px) !important;
+  }
+}
 table {
   width: 100%;
   white-space: nowrap;

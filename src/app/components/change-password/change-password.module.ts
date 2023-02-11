@@ -10,23 +10,25 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
   declarations: [
     ChangePasswordComponent
   ],
-  imports: [
-    CommonModule,
-    ChangePasswordRoutingModule,
-    MatCardModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatFormFieldModule
-  ]
+    imports: [
+        CommonModule,
+        ChangePasswordRoutingModule,
+        MatCardModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatInputModule,
+        MatToolbarModule,
+        MatFormFieldModule,
+        MatIconModule
+    ]
 })
 export class ChangePasswordModule { }
