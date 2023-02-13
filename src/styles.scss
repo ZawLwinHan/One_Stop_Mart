@@ -707,7 +707,7 @@ overflow: hidden !important;
   width: 80% !important;
   border-radius: 2px;
   border: 1px solid #f1f5ff !important;
-  background-color:#f1f5ff !important;
+  background-color:$primary-light !important;
 }
 .select2{
   height: 50px;
@@ -717,7 +717,7 @@ overflow: hidden !important;
   padding: 15px 15px;
   border-radius: 2px;
   border: 1px solid #f1f5ff ;
-  background-color:#f1f5ff ;
+  background-color:$primary-light ;
 
   &:focus{
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);

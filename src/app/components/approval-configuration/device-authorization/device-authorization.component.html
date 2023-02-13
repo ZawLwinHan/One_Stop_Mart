@@ -15,13 +15,13 @@
         <div class="search-form">
           <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
         </div>
-        <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
+        <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'../create-device-authorization'">
-        <img src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
+        <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'../edit-device-authorization'">
-        <img src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
+        <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link">
         <img  class="crud-btns" matTooltip="Filter"
               aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Filter.svg" alt="" >
@@ -117,7 +117,7 @@
     </div>
 
     <mat-toolbar>
-      <mat-paginator class="mat-paginator-user-role-permission" [pageSizeOptions]="[20, 25, 50, 100]" showFirstLastButtons
+      <mat-paginator class="mat-paginator-user-role-permission" [pageSizeOptions]="[10, 25, 50, 100]" showFirstLastButtons
                      aria-label="Select page of periodic elements">
       </mat-paginator>
     </mat-toolbar>
