@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
+import { MatPaginator } from '@angular/material/paginator';
 import {SelectionModel} from "@angular/cdk/collections";
 
 @Component({
@@ -13,11 +14,16 @@ export class TransactionAmountListComponent implements OnInit {
     'isCounter','isActive', 'dateTime', 'updateTime', 'createdUserName' , 'updatedUserName'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   selection = new SelectionModel<PeriodicElement>(true, []);
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -61,6 +67,18 @@ export interface PeriodicElement {
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
+  {  companyName: 'Internet Wallet Myanmar', shopName: '0054 Myin Thar',  approvalUserName:'Aung Myo', approvalUserNo:'+95 09958484545', approvalUserEmail:'aungmyo@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Aung Myo' , updatedUserName: 'Aung Myo'},
+  {  companyName: 'One Stop Mart Insein', shopName: '0021 Shwe Bon Thar',  approvalUserName:'Shwe Sin', approvalUserNo:'+95 09958484545', approvalUserEmail:'shwesin@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Shwe Sin' , updatedUserName: 'Shwe Sin'},
+  {  companyName: 'One Stop Mart Tarmwe', shopName: '0056 Bo Aung Kyaw',  approvalUserName:'Myo Min', approvalUserNo:'+95 09958484545', approvalUserEmail:'myomin@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Myo Min' , updatedUserName: 'Myo Min'},
+  {  companyName: 'One Stop Mart North Dagon', shopName: '068 Nandarwon',  approvalUserName:'Mg Mg', approvalUserNo:'+95 09958484545', approvalUserEmail:'mgmg@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Mg Mg' , updatedUserName: 'Mg Mg'},
+  {  companyName: 'Internet Wallet Myanmar', shopName: '0054 Myin Thar',  approvalUserName:'Aung Myo', approvalUserNo:'+95 09958484545', approvalUserEmail:'aungmyo@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Aung Myo' , updatedUserName: 'Aung Myo'},
+  {  companyName: 'One Stop Mart Insein', shopName: '0021 Shwe Bon Thar',  approvalUserName:'Shwe Sin', approvalUserNo:'+95 09958484545', approvalUserEmail:'shwesin@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Shwe Sin' , updatedUserName: 'Shwe Sin'},
+  {  companyName: 'One Stop Mart Tarmwe', shopName: '0056 Bo Aung Kyaw',  approvalUserName:'Myo Min', approvalUserNo:'+95 09958484545', approvalUserEmail:'myomin@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Myo Min' , updatedUserName: 'Myo Min'},
+  {  companyName: 'One Stop Mart North Dagon', shopName: '068 Nandarwon',  approvalUserName:'Mg Mg', approvalUserNo:'+95 09958484545', approvalUserEmail:'mgmg@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Mg Mg' , updatedUserName: 'Mg Mg'},
+  {  companyName: 'Internet Wallet Myanmar', shopName: '0054 Myin Thar',  approvalUserName:'Aung Myo', approvalUserNo:'+95 09958484545', approvalUserEmail:'aungmyo@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Aung Myo' , updatedUserName: 'Aung Myo'},
+  {  companyName: 'One Stop Mart Insein', shopName: '0021 Shwe Bon Thar',  approvalUserName:'Shwe Sin', approvalUserNo:'+95 09958484545', approvalUserEmail:'shwesin@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Shwe Sin' , updatedUserName: 'Shwe Sin'},
+  {  companyName: 'One Stop Mart Tarmwe', shopName: '0056 Bo Aung Kyaw',  approvalUserName:'Myo Min', approvalUserNo:'+95 09958484545', approvalUserEmail:'myomin@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Myo Min' , updatedUserName: 'Myo Min'},
+  {  companyName: 'One Stop Mart North Dagon', shopName: '068 Nandarwon',  approvalUserName:'Mg Mg', approvalUserNo:'+95 09958484545', approvalUserEmail:'mgmg@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Mg Mg' , updatedUserName: 'Mg Mg'},
   {  companyName: 'Internet Wallet Myanmar', shopName: '0054 Myin Thar',  approvalUserName:'Aung Myo', approvalUserNo:'+95 09958484545', approvalUserEmail:'aungmyo@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Aung Myo' , updatedUserName: 'Aung Myo'},
   {  companyName: 'One Stop Mart Insein', shopName: '0021 Shwe Bon Thar',  approvalUserName:'Shwe Sin', approvalUserNo:'+95 09958484545', approvalUserEmail:'shwesin@gmail.com', isCounter:true, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Shwe Sin' , updatedUserName: 'Shwe Sin'},
   {  companyName: 'One Stop Mart Tarmwe', shopName: '0056 Bo Aung Kyaw',  approvalUserName:'Myo Min', approvalUserNo:'+95 09958484545', approvalUserEmail:'myomin@gmail.com', isCounter:false, isActive:true, dateTime:'Mon, 08-Jan-2021 09:10:20', 'updateTime': 'Mon, 09-Jan-2021 09:14:18', createdUserName:'Myo Min' , updatedUserName: 'Myo Min'},
