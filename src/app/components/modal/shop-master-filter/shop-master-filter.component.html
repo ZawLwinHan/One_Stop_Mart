@@ -3,7 +3,7 @@
     <div class="modal-header">
       <h4 class="text-warning">Add Counter Detail</h4>
       <i class="fa fa-close close" aria-hidden="true"></i>
-      <img src="assets/img/Icon/x.svg" alt="" class="crud-btns close" (click)="onDismiss()">
+      <img src="assets/img/icon/x.svg" alt="" class="close" (click)="onDismiss()">
     </div>
     <mat-dialog-content class="mat-typography">
       <div class="content_outer">
@@ -41,7 +41,7 @@
                 </mat-select>
             </div>
       </div>
-
+      
       <div class="row">
         <div class="my-2 col-12 col-md-6 col-lg-4 ">
             <div>
@@ -61,17 +61,15 @@
             </mat-select>
         </div>
           
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <br>
-            <mat-form-field floatLabel="always">
-              <mat-label class="label-input">Contact Number<span>*</span></mat-label>
-              <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
-                    &nbsp;<span style="font-size: 14px">+95</span>
-                  </span>
-              <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 75% !important;">
-              <mat-icon matSuffix></mat-icon>
-            </mat-form-field>
-          </div>
+        <div class="my-2 col-12 col-md-6 col-lg-4">
+          <br>
+          <mat-form-field floatLabel="always" class="changePswrd-input">
+            <mat-label class="label-input">Cash Out Account Password</mat-label>
+            <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Enter Cash Out Account Password">
+            <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+
+          </mat-form-field>
+        </div>
 
           <div class="my-2 col-12 col-md-6 col-lg-4 ">
             <div>
@@ -89,7 +87,7 @@
               </div>
               <mat-option *ngFor="let  ampaywithokdollarno of ampaywithokdollarnumbers" [value]="ampaywithokdollarno">{{ampaywithokdollarno}}</mat-option>
             </mat-select>
-        </div>
+         </div>
       </div>
 
       <div class="row">
@@ -98,7 +96,7 @@
                 <mat-label for="">Pay With OK$ Number<span>*</span></mat-label>
               </div>
               <br>
-              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+              <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
                 <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
                   fxLayoutAlign="space-between center">
                   <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -106,26 +104,18 @@
                       <input matInput class="select_search_box" placeholder="Enter Keywords">
                     </mat-form-field>
                   </div>
-                  <button fxLayout="row" mat-button class="check_uncheck_btn">
-                    <mat-icon class="secondary-text s-5">
-                      check</mat-icon>Check All
-                  </button>
-                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
-                    <mat-icon class="secondary-text s-5">
-                      clear</mat-icon>Uncheck All
-                  </button>
                 </div>
-                <mat-option *ngFor="let paywithokdollarno of paywithokdollarnumbers" [value]="paywithokdollarno">{{paywithokdollarno}}</mat-option>
-
-               
+                <mat-option *ngFor="let  ampaywithokdollarno of ampaywithokdollarnumbers" [value]="ampaywithokdollarno">{{ampaywithokdollarno}}</mat-option>
               </mat-select>
             </div>
           
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+            <div class="my-2 col-12 col-md-6 col-lg-4">
               <br>
-              <mat-form-field floatLabel="always">
-                  <mat-label class="label-input">Enter Road<span>*</span></mat-label>
-                  <input matInput class="input1" placeholder="Enter Road">
+              <mat-form-field floatLabel="always" class="changePswrd-input">
+                <mat-label class="label-input">Pay With OK$ Account Password</mat-label>
+                <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Pay With OK$ Account Password">
+                <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+    
               </mat-form-field>
             </div>
       </div>
@@ -134,7 +124,7 @@
           <button class="noBtn" (click)="onDismiss()">Cancel</button>
           <button class="saveandsend" (click)="onDismiss()">Add & Continue</button>
         </div>
-  
+        
       </div>
     </mat-dialog-content>
   </div>

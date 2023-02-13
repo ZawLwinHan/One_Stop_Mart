@@ -32,6 +32,7 @@ import { ConfirmAlertComponent } from './components/modal/confirm-alert/confirm-
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { ShopMasterFilterComponent } from './components/modal/shop-master-filter/shop-master-filter.component';
+import { AssignBackendModalComponent } from './components/modal/assign-backend-modal/assign-backend-modal.component';
 
 // @ts-ignore
 @NgModule({
@@ -40,6 +41,7 @@ import { ShopMasterFilterComponent } from './components/modal/shop-master-filter
     UserRolePermissionFilterComponent,
     ConfirmAlertComponent,
     ShopMasterFilterComponent,
+    AssignBackendModalComponent,
   ],
   imports: [
     BrowserModule,

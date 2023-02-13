@@ -124,4 +124,33 @@
     }
   }
   //Media Query End
-  
+  .table-pagination table
+{
+  width: 100%;
+  white-space: nowrap;
+}
+.table-pagination tr
+{
+  border: 1px solid #cccccc;
+}
+.table-pagination table th {
+  background: #fff;
+  font-size: 16px;
+  padding-right: 24px;
+  white-space: nowrap;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+  font-weight: 700;
+  padding: 0px 25px;
+}
+.table-pagination table td{
+  text-align: left;
+  border-right: 1px solid #cccccc;
+  text-align: center;
+  font-weight: 600;
+  padding: 0px 25px;
+}
+
+.table-pagination{
+  overflow: auto;
+}

@@ -14,6 +14,7 @@ export class ShopMasterFilterComponent {
 
   ngOnInit(): void {
   }
+  hide : boolean = true
 
   onDismiss(){
     this.dialogRef.close();
@@ -23,5 +24,9 @@ export class ShopMasterFilterComponent {
   cashoutnumbers:string[] = ['+95 09452 123 456 ', '+95 09662 345 671'];
   ampaywithokdollarnumbers: string[] = ['+95 0912345678', '+95 09750 123 456'];
   paywithokdollarnumbers: string[] = ['+95 0912345678', '+95 09750 123 456'];
+
+  reveal(){
+    this.hide = !this.hide
+  }
 
 }

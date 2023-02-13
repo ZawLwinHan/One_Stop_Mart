@@ -1,11 +1,4 @@
-::ng-deep .mat-select-panel
-{
-  min-width: calc(100% + 94px) !important;
-}
 
-::ng-deep .mat-form-field-underline {
-  display: none;
-}
 .content_outer{
     padding: 15px 20px 20px;
 }
@@ -50,10 +43,7 @@
 .select_search_box {
   width: 133px;
 }
-.mat-select-panel{
-  max-width: 320px;
-  max-height: 188px;
-}
+
 .mat-form-field-underline
 {
   display: none;
