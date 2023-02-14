@@ -323,6 +323,7 @@ button {
   padding: 50px 24px 25px;
   border-radius: 12px;
   background: $primary;
+  width: 440px;
 
   h4 {
     color: $primary;
@@ -391,10 +392,6 @@ button {
     color: $primary;
     border-bottom: 1px dotted transparent;
     font-weight: 500;
-
-    &:hover {
-      border-bottom: 1px dotted;
-    }
   }
 }
 
