@@ -749,7 +749,7 @@ mat-drawer {
 }
 ///Calendar theme css //
 .theme-green .bs-datepicker-head {
-  background-color:  $primary !important;
+  background-color: $primary !important;
 }
 
 .theme-green .bs-datepicker-body table td span.selected {
@@ -1000,6 +1000,9 @@ header {
   .secondary-table-pagination {
     height: calc(80vh - 120px) !important;
   }
+  .eye-icon {
+    right: 52px !important;
+  }
 }
 table {
   width: 100%;
@@ -1106,7 +1109,7 @@ table {
   border: 1px solid #a30303;
 }
 
-.saveBtn{
+.saveBtn {
   background: #22af47 !important;
   color: $white;
   margin-right: 30px !important;
@@ -1114,7 +1117,6 @@ table {
   width: 143px;
   font-size: 20px;
   border: 1px solid #22af47;
-
 }
 
 //Confirm Box css end
@@ -1158,11 +1160,12 @@ table {
 .main-content {
   background-color: #fff !important;
 }
-.custom-today-class{
+.custom-today-class {
   background-color: $primary-light;
-  color: #54708b
+  color: #54708b;
 }
-bs-datepicker-container, bs-daterangepicker-container {
+bs-datepicker-container,
+bs-daterangepicker-container {
   left: 110px !important;
 }
 .main-content{
