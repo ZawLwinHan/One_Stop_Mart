@@ -764,7 +764,7 @@ overflow: hidden !important;
 }
 ///Calendar theme css //
 .theme-green .bs-datepicker-head {
-  background-color:  #ffb81c !important;
+  background-color:  $primary !important;
 }
 
 .theme-green .bs-datepicker-body table td span.selected{
@@ -1103,7 +1103,7 @@ table {
   font-size: 20px;
   margin: 20px;
   border: 1px solid $primary;
- 
+
 
 }
 .noBtn {
@@ -1114,7 +1114,7 @@ table {
   width: 143px;
   font-size: 20px;
   border: 1px solid #a30303;
- 
+
 }
 
 .saveBtn{
@@ -1170,3 +1170,13 @@ table {
 .main-content{
   background-color: #fff !important;
 }
+.filter_select_header{
+  background: #224193 !important;
+  color: white;
+}
+.bs-datepicker{
+  left: 105px;
+}
+.custom-today-class{
+  background-color: $primary-light;
+  color: #54708b }
