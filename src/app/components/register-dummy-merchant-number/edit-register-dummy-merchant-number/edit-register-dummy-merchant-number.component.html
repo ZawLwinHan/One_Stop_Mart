@@ -1,1 +1,166 @@
-<p>edit-register-dummy-merchant-number works!</p>
+<div class="main-content container-fluid p-3">
+  <div class="row">
+    <div
+      class="py-3 d-block d-md-flex justify-content-between align-items-center"
+    >
+      <div class="breadcrumbText">
+        <span>Edit Register Dummy Merchant Number</span>
+      </div>
+    </div>
+  </div>
+  <div class="row py-2">
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input">Company Name<span>*</span></mat-label>
+        <input
+          matInput
+          class="input1"
+          placeholder="Enter Company Name"
+          value="Internet Wallet Myanmar"
+        />
+      </mat-form-field>
+    </div>
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input">Advance Number<span>*</span></mat-label>
+        <span
+          class="country-flag mobileInput"
+          matPrefix
+          style="display: flex; vertical-align: baseline"
+        >
+          &nbsp;<span style="font-size: 14px">+95</span>
+        </span>
+        <input
+          matInput
+          class="input1 paddingBottom-2"
+          placeholder=""
+          style="padding-left: 50px !important; width: 75% !important"
+          value="09420980123"
+        />
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input"
+          >Dummy Merchant Name<span>*</span></mat-label
+        >
+        <input
+          matInput
+          class="input1"
+          placeholder="Enter Dummy Merchant Name"
+          value="Mobile Payment"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input"
+          >Dummy Merchant Number<span>*</span></mat-label
+        >
+        <span
+          class="country-flag mobileInput"
+          matPrefix
+          style="display: flex; vertical-align: baseline"
+        >
+          &nbsp;<span style="font-size: 14px">+95</span>
+        </span>
+        <input
+          matInput
+          class="input1 paddingBottom-2"
+          placeholder=""
+          style="padding-left: 50px !important; width: 75% !important"
+          value="09968132138"
+        />
+        <mat-icon matSuffix></mat-icon>
+      </mat-form-field>
+    </div>
+
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always" class="changePswrd-input">
+        <mat-label class="label-input"
+          >Dummy Merchant Password<span>*</span></mat-label
+        >
+        <input
+          matInput
+          type="{{ hide ? 'password' : 'text' }}"
+          class="input1"
+          placeholder="Enter Dummy Merchant Password"
+          value="abcdef"
+        />
+        <mat-icon matSuffix (click)="reveal()" class="pointer eye-icon">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input">Father Name<span>*</span></mat-label>
+        <input
+          matInput
+          class="input1"
+          placeholder="Enter Father Name"
+          value="U Myo"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="my-2 col-12 col-md-6 col-lg-4">
+      <br />
+      <mat-form-field floatLabel="always">
+        <mat-label class="label-input">Business Name<span>*</span></mat-label>
+        <input
+          matInput
+          class="input1"
+          placeholder="Enter Business Name"
+          value="Phone Shop"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="row py-2">
+    <div class="col-md-4">
+      <div class="checkbox-group">
+        <input
+          type="checkbox"
+          id="Is Active"
+          name="active"
+          value="active"
+          checked
+          class="activeCheckBox"
+        />
+        <label for="Is Active">Is Active</label>
+      </div>
+    </div>
+  </div>
+</div>
+<mat-toolbar>
+  <div class="button_group" style="line-height: 20px">
+    <button
+      class="noBtn"
+      mat-button
+      [routerLink]="'/RegisterDummyMerchantNumber'"
+    >
+      Cancel
+    </button>
+    <button
+      class="yesBtn m-0"
+      mat-button
+      [routerLink]="'/RegisterDummyMerchantNumber'"
+    >
+      Save
+    </button>
+  </div>
+</mat-toolbar>
