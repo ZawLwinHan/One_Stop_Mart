@@ -32,7 +32,12 @@ import { ConfirmAlertComponent } from './components/modal/confirm-alert/confirm-
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { ShopMasterFilterComponent } from './components/modal/shop-master-filter/shop-master-filter.component';
+<<<<<<< Updated upstream
 import { AssignBackendModalComponent } from './components/modal/assign-backend-modal/assign-backend-modal.component';
+=======
+import { RegisterUserFilterComponent } from './components/modal/register-user-filter/register-user-filter.component';
+import {FlexModule} from "@angular/flex-layout";
+>>>>>>> Stashed changes
 
 // @ts-ignore
 @NgModule({
@@ -41,38 +46,43 @@ import { AssignBackendModalComponent } from './components/modal/assign-backend-m
     UserRolePermissionFilterComponent,
     ConfirmAlertComponent,
     ShopMasterFilterComponent,
+<<<<<<< Updated upstream
     AssignBackendModalComponent,
+=======
+    RegisterUserFilterComponent,
+>>>>>>> Stashed changes
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SharedModule,
-    CoreModule,
-    RouterModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    MatDatepickerModule,
-    MatSelectModule,
-    MatIconModule,
-    MatListModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatInputModule,
-    MatCardModule,
-    MatRippleModule,
-    MatExpansionModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatSnackBarModule,
-    MatNativeDateModule,
-    MatCheckboxModule,
-    MatRadioModule,
-    MatToolbarModule,
-    BsDatepickerModule.forRoot(),
-    NgxMaterialTimepickerModule
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SharedModule,
+        CoreModule,
+        RouterModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatDatepickerModule,
+        MatSelectModule,
+        MatIconModule,
+        MatListModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatInputModule,
+        MatCardModule,
+        MatRippleModule,
+        MatExpansionModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatSnackBarModule,
+        MatNativeDateModule,
+        MatCheckboxModule,
+        MatRadioModule,
+        MatToolbarModule,
+        BsDatepickerModule.forRoot(),
+        NgxMaterialTimepickerModule,
+        FlexModule
 
-  ],
+    ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

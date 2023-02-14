@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import {SelectionModel} from '@angular/cdk/collections';
+import {RegisterUserFilterComponent} from "../../modal/register-user-filter/register-user-filter.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-register-user-list',
@@ -17,9 +19,16 @@ export class RegisterUserListComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog() {
+    this.dialog.open(RegisterUserFilterComponent, {
+      width: '900px',
+      data: {}
+    });
   }
 
   ngAfterViewInit() {
