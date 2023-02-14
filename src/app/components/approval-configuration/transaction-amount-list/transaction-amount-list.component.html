@@ -15,7 +15,7 @@
         <div class="search-form">
           <input type="text" name="search" placeholder="Search" class="search-bar" autocomplete="off">
         </div>
-        <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
+        <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'../create-transaction-amount'">
         <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
