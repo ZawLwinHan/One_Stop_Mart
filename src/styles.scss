@@ -753,7 +753,7 @@ mat-drawer {
 }
 ///Calendar theme css //
 .theme-green .bs-datepicker-head {
-  background-color:  #ffb81c !important;
+  background-color:  $primary !important;
 }
 
 .theme-green .bs-datepicker-body table td span.selected {
@@ -761,7 +761,7 @@ mat-drawer {
 }
 
 .theme-green .bs-datepicker-body table td.week span {
-  color: #ffb81c !important;
+  color: $primary !important;
 }
 
 // modal filter
@@ -1158,4 +1158,11 @@ table {
 
 .main-content {
   background-color: #fff !important;
+}
+.custom-today-class{
+  background-color: $primary-light;
+  color: #54708b
+}
+bs-datepicker-container, bs-daterangepicker-container {
+  left: 110px !important;
 }

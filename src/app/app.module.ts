@@ -34,6 +34,7 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ShopMasterFilterComponent } from './components/modal/shop-master-filter/shop-master-filter.component';
 import { AssignBackendModalComponent } from './components/modal/assign-backend-modal/assign-backend-modal.component';
 import { FlexModule } from '@angular/flex-layout';
+import { RegisterUserFilterComponent } from './components/modal/register-user-filter/register-user-filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { FlexModule } from '@angular/flex-layout';
     ConfirmAlertComponent,
     ShopMasterFilterComponent,
     AssignBackendModalComponent,
+    RegisterUserFilterComponent,
   ],
   imports: [
     BrowserModule,

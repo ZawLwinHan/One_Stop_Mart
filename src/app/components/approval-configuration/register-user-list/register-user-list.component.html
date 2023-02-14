@@ -23,7 +23,7 @@
              [routerLink]="'./edit-register-user'">
         <img *ngIf="selection.hasValue() || isAllSelected()" src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link">
-        <img  class="crud-btns" matTooltip="Filter"
+        <img  class="crud-btns" matTooltip="Filter" (click)="openDialog()"
               aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Filter.svg" alt="" >
         <img class="crud-btns" matTooltip="Excel Download"
              aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Download%20Excel.svg" alt="">
