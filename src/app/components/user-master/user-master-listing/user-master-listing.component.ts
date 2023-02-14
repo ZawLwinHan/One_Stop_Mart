@@ -3,11 +3,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
-  selector: 'app-company-listing',
-  templateUrl: './company-listing.component.html',
-  styleUrls: ['./company-listing.component.scss'],
+  selector: 'app-user-master-listing',
+  templateUrl: './user-master-listing.component.html',
+  styleUrls: ['./user-master-listing.component.scss'],
 })
-export class CompanyListingComponent implements OnInit {
+export class UserMasterListingComponent implements OnInit {
   select = true;
   displayedColumns: string[] = [
     'select',

@@ -2,13 +2,11 @@
 @import "app-theme.scss";
 @import "variable-mixins.scss";
 
-
 *,
 ::after,
 ::before {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
-
 
 html,
 body {
@@ -41,7 +39,7 @@ h5 {
 
 h6 {
   font-size: 12px !important;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   font-weight: 700 !important;
   color: $darkgray !important;
 }
@@ -55,7 +53,7 @@ small {
 a {
   display: inline-block;
   text-decoration: none;
-  @include transition(color .2s ease-out);
+  @include transition(color 0.2s ease-out);
 }
 
 a {
@@ -241,30 +239,30 @@ button {
   height: 45px;
   text-transform: uppercase;
 }
-.mat-success{
+.mat-success {
   background-color: $green;
   color: $white;
 }
 
-@media (min-width:576px) {
+@media (min-width: 576px) {
   .container {
     max-width: 540px;
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .container {
     max-width: 720px;
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
@@ -279,7 +277,7 @@ button {
   padding-right: 25px;
   padding-left: 25px;
   margin-right: auto;
-  margin-left: auto
+  margin-left: auto;
 }
 
 .row {
@@ -288,7 +286,7 @@ button {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px
+  margin-left: -15px;
 }
 
 // SignUp
@@ -330,7 +328,6 @@ button {
     color: $primary;
   }
 
-
   &.space {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -340,7 +337,7 @@ button {
     margin-bottom: 15px;
 
     mat-icon {
-      &.field-icon{
+      &.field-icon {
         margin-right: 5px;
       }
       &.pointer {
@@ -363,7 +360,6 @@ button {
   .mat-radio-group {
     display: inline-block;
   }
-
 
   .mat-form-field,
   .mat-raised-button {
@@ -408,7 +404,6 @@ button {
   z-index: 1;
   overflow: hidden;
   min-height: 100vh;
-
 }
 
 .mat-form-field-wrapper {
@@ -439,7 +434,6 @@ mat-form-field {
   font-size: 12px;
 }
 
-
 .table-responsive {
   max-width: 100%;
   overflow-x: auto;
@@ -448,46 +442,46 @@ mat-form-field {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0 .75rem;
+  padding: 0 0.75rem;
   font-size: 1rem;
-  color: rgba($color:$black, $alpha: .65);
+  color: rgba($color: $black, $alpha: 0.65);
   background-color: $white;
   background-clip: padding-box;
-  border: 1px solid rgba($color:$black, $alpha: 0.1);
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border: 1px solid rgba($color: $black, $alpha: 0.1);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   &:focus {
     background-color: $white;
-    border-color: rgba($color:$primary, $alpha: 0.35);
+    border-color: rgba($color: $primary, $alpha: 0.35);
     outline: 0;
   }
 }
 
 // css for ok-sms-configuration
 
-.myPanelClass{
+.myPanelClass {
   margin-top: 40px;
   margin-left: 25px;
   min-width: calc(100% + 32px) !important;
 }
-.myPanelClass1{
+.myPanelClass1 {
   margin-top: 40px;
   //margin-left: 25px;
   min-width: calc(100% + 32px) !important;
 }
-.myPanelClass .mat-button-wrapper{
+.myPanelClass .mat-button-wrapper {
   margin-top: 3.5px;
 }
-.normalSelect{
+.normalSelect {
   margin-top: 40px;
   min-width: calc(100% + 32px) !important;
 }
-.myPanelClass1{
+.myPanelClass1 {
   margin-top: 40px;
 }
 .mat-form-field-appearance-standard .mat-form-field-flex {
-   padding-top: 0em !important;
+  padding-top: 0em !important;
 }
 .mat-form-field-wrapper {
   padding-bottom: 0em;
@@ -508,7 +502,7 @@ table::-webkit-scrollbar {
 }
 
 table::-webkit-scrollbar-thumb {
-  background-color:#5b5650;
+  background-color: #5b5650;
   background-clip: padding-box;
   border-radius: 10px;
 }
@@ -534,12 +528,12 @@ table::-webkit-scrollbar-button:single-button:vertical:decrement {
 table::-webkit-scrollbar-button:single-button:horizontal:decrement {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-right:8px solid #5b5650;
+  border-right: 8px solid #5b5650;
   border-left: 0px solid transparent;
 }
 
 /*Right*/
-table::-webkit-scrollbar-button:single-button:horizontal:increment{
+table::-webkit-scrollbar-button:single-button:horizontal:increment {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 8px solid #5b5650;
@@ -561,7 +555,7 @@ table::-webkit-scrollbar-button:vertical:single-button:increment:hover {
 }
 
 // other sms css
-.multiSelect{
+.multiSelect {
   margin-top: 40px;
 }
 .mat-form-field-appearance-fill .mat-form-field-flex {
@@ -575,12 +569,12 @@ table::-webkit-scrollbar-button:vertical:single-button:increment:hover {
 }
 
 // body scrollbar hidden
-body{
+body {
   overflow: hidden;
 }
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
-  background-color:transparent !important;
+  background-color: transparent !important;
 }
 
 // BEGIN : MEDIA
@@ -591,9 +585,11 @@ body{
 // gt-sm = screen and (min-width: 960px)
 // gt-xs = screen and (min-width: 600px)
 
-@media screen and (min-width: 1280px) {}
+@media screen and (min-width: 1280px) {
+}
 
-@media screen and (max-width: 1279.99px) {}
+@media screen and (max-width: 1279.99px) {
+}
 
 @media screen and (max-width: 959.99px) {
   .pt-sm-30 {
@@ -634,37 +630,31 @@ body{
 
 // END : MEDIA
 
-
 //login design//
 
-
-.mat-list-item-content{
+.mat-list-item-content {
   font-size: 14px;
-
 }
 
-mat-drawer{
+mat-drawer {
   padding: 0px;
 }
 
-.mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
-
+.mat-list-base .mat-list-item .mat-list-item-content,
+.mat-list-base .mat-list-option .mat-list-item-content {
   font-family: "Roboto", sans-serif !important;
-
 }
-
 
 .mat-dialog-container {
   padding: 0 !important;
   overflow-x: hidden !important;
   overflow-y: auto;
-
 }
 
-.close{
+.close {
   background: #fff;
-    border-radius: 20px;
-    cursor: pointer;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 // chart design
@@ -673,32 +663,31 @@ mat-drawer{
   text-align: center !important;
 }
 
-
 //multiple upload dialog in email
-.dialog-content .mat-dialog-container{
+.dialog-content .mat-dialog-container {
   background-color: var(--background);
-  box-shadow: none ;
-padding: 0px !important;
-overflow: hidden !important;
+  box-shadow: none;
+  padding: 0px !important;
+  overflow: hidden !important;
 }
 
 // emial modal upload css
-    .InputClass .mat-form-field-infix {
-      padding: 0;
-  }
+.InputClass .mat-form-field-infix {
+  padding: 0;
+}
 
-  .InputClass .mat-form-field-flex {
-    padding: 0 !important;
+.InputClass .mat-form-field-flex {
+  padding: 0 !important;
 }
 .InputClass .mat-form-field-wrapper {
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
-.dialog-content{
+.dialog-content {
   position: absolute !important;
   top: 42%;
   right: 1%;
 }
-.input1{
+.input1 {
   height: 20px;
   outline: none !important;
   margin: 12px 0 !important;
@@ -707,19 +696,19 @@ overflow: hidden !important;
   width: 80% !important;
   border-radius: 2px;
   border: 1px solid #f1f5ff !important;
-  background-color:$primary-light !important;
+  background-color: $primary-light !important;
 }
-.select2{
+.select2 {
   height: 50px;
   outline: none;
   margin-bottom: 10px;
   width: 85% !important;
   padding: 15px 15px;
   border-radius: 2px;
-  border: 1px solid #f1f5ff ;
-  background-color:$primary-light ;
+  border: 1px solid #f1f5ff;
+  background-color: $primary-light;
 
-  &:focus{
+  &:focus {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   }
 }
@@ -733,33 +722,33 @@ overflow: hidden !important;
   border-radius: 20px;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
 }
-.clearIcon{
+.clearIcon {
   float: right;
   padding-bottom: 8px;
   color: #cd0000;
   cursor: pointer;
 }
-@media only screen and (min-width: 320px) and (max-width: 480px)  {
-  .dialog-content{
-    top: 34% ;
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .dialog-content {
+    top: 34%;
     right: 7%;
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px)  {
-  .dialog-content{
-    top: 45% ;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .dialog-content {
+    top: 45%;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 1024px)  {
-  .dialog-content{
-    top: 29% ;
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .dialog-content {
+    top: 29%;
     right: 2%;
   }
 }
-@media only screen and (min-width: 1025px) and (max-width: 1560px)  {
-  .dialog-content{
-    top: 26% ;
+@media only screen and (min-width: 1025px) and (max-width: 1560px) {
+  .dialog-content {
+    top: 26%;
   }
 }
 ///Calendar theme css //
@@ -767,17 +756,16 @@ overflow: hidden !important;
   background-color:  $primary !important;
 }
 
-.theme-green .bs-datepicker-body table td span.selected{
+.theme-green .bs-datepicker-body table td span.selected {
   background-color: #263645 !important;
 }
-
 
 .theme-green .bs-datepicker-body table td.week span {
   color: #ffb81c !important;
 }
 
 // modal filter
-.modalNormalSelect{
+.modalNormalSelect {
   margin-top: 40px;
   min-width: calc(100% + 32px) !important;
   margin-left: 25px !important;
@@ -799,25 +787,24 @@ overflow: hidden !important;
   background-color: white;
   justify-content: center;
 }
-.ngx-timepicker-control__arrow{
+.ngx-timepicker-control__arrow {
   margin-bottom: -8px !important;
 }
-.ngx-timepicker-control__arrows{
+.ngx-timepicker-control__arrows {
   top: -3px;
 }
-.ngx-timepicker__control--second{
+.ngx-timepicker__control--second {
   margin-bottom: 1px;
 }
 
-.mat-nav-list
-{
+.mat-nav-list {
   overflow-y: auto;
   max-height: 65vh;
 }
 
 //Auth Css Start
 
-.input_image_box{
+.input_image_box {
   position: absolute;
   top: 2px;
   left: 2px;
@@ -829,7 +816,7 @@ overflow: hidden !important;
   justify-content: center;
   z-index: 100;
 }
-.login_btn{
+.login_btn {
   background-color: $secondary;
   color: $primary;
   font-size: 20px;
@@ -842,7 +829,7 @@ overflow: hidden !important;
   cursor: pointer;
   border: 2px solid $white;
 }
-.incorrect_password{
+.incorrect_password {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -885,7 +872,7 @@ overflow: hidden !important;
 }
 
 //filter css
-.filterRow{
+.filterRow {
   flex-direction: row;
   box-sizing: border-box;
   display: flex;
@@ -893,7 +880,7 @@ overflow: hidden !important;
   align-items: center;
 }
 
-.mat-toolbar{
+.mat-toolbar {
   background-color: #fafafa;
 }
 
@@ -949,12 +936,12 @@ overflow: hidden !important;
 ::-webkit-scrollbar-button:single-button:horizontal:decrement {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-right:8px solid #5b5650;
+  border-right: 8px solid #5b5650;
   border-left: 0px solid transparent;
 }
 
 /*Right*/
-::-webkit-scrollbar-button:single-button:horizontal:increment{
+::-webkit-scrollbar-button:single-button:horizontal:increment {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-left: 8px solid #5b5650;
@@ -974,11 +961,11 @@ overflow: hidden !important;
 ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
   border-color: #777777 transparent transparent transparent;
 }
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: #5b5656;
 }
 //header css start
-header{
+header {
   height: 60px;
   font-size: 25px;
   color: #fff;
@@ -989,10 +976,16 @@ header{
   background-color: $primary-light;
   color: #000000 !important;
 }
-.mat-list-option, .mat-nav-list {
+.mat-list-option,
+.mat-nav-list {
   font-weight: bold;
 }
-.mat-list-option:hover, .mat-list-option:focus, .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus, .mat-action-list .mat-list-item:hover, .mat-action-list .mat-list-item:focus {
+.mat-list-option:hover,
+.mat-list-option:focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item:focus,
+.mat-action-list .mat-list-item:hover,
+.mat-action-list .mat-list-item:focus {
   background: $primary-light;
 }
 //header css end
@@ -1008,27 +1001,26 @@ header{
   padding: 0px 25px;
 }
 @media screen and (max-width: 1551px) {
-  .secondary-table-pagination{
+  .secondary-table-pagination {
     height: calc(80vh - 120px) !important;
   }
 }
 table {
   width: 100%;
   white-space: nowrap;
-
 }
 
-.mat-paginator-user-role-permission{
+.mat-paginator-user-role-permission {
   width: 100%;
   margin-left: 0 !important;
 }
 
-.mat-toolbar-row, .mat-toolbar-single-row
-{
+.mat-toolbar-row,
+.mat-toolbar-single-row {
   padding: 0px;
 }
 
-.secondary-table-pagination{
+.secondary-table-pagination {
   height: calc(82vh - 120px);
   overflow: auto;
 }
@@ -1036,14 +1028,14 @@ table {
 // .secondary-table-pagination td{border: 1px solid $primary-light;
 // }
 
-.secondary-table-pagination td{
+.secondary-table-pagination td {
   text-align: center;
   // border-right: 1px solid $primary-light;
   font-weight: 600;
   padding: 0px 25px !important;
 }
 
-.profileImageList{
+.profileImageList {
   width: 50px;
   display: block;
   margin-left: auto;
@@ -1052,59 +1044,58 @@ table {
   border-radius: 50%;
 }
 
-.mat-toolbar-row, .mat-toolbar-single-row
-{
+.mat-toolbar-row,
+.mat-toolbar-single-row {
   padding: 0 !important;
 }
 
-.crud-btns{
+.crud-btns {
   width: 40px;
-  padding:0px 5px;
+  padding: 0px 5px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
-
-.actionImage{
+.actionImage {
   width: 25px;
   cursor: pointer;
 }
 //Tables css end
 
 //Confirm Box css start
-.confirm_dialog{
+.confirm_dialog {
   overflow: auto;
   text-align: center;
   background-color: #fff;
   border-radius: 10px !important;
   border: 5px solid $primary !important;
 
-  h3{
+  h3 {
     font-weight: normal;
     font-size: 30px;
     line-height: 1.8;
   }
 }
-.mat-dialog-container{
-  border-radius: 10px!important;
+.mat-dialog-container {
+  border-radius: 10px !important;
 }
 .yesBtn {
-  background: $primary  !important;
+  background: $primary !important;
   color: $white;
   border-radius: 30px !important;
   width: 143px;
   font-size: 20px;
   margin: 20px;
+  border: none;
 }
 
-.saveandsend{
-  background: $primary  !important;
+.saveandsend {
+  background: $primary !important;
   color: $white;
   border-radius: 30px !important;
   font-size: 20px;
   margin: 20px;
   border: 1px solid $primary;
-
-
 }
 .noBtn {
   background: #a30303 !important;
@@ -1114,11 +1105,9 @@ table {
   width: 143px;
   font-size: 20px;
   border: 1px solid #a30303;
-
 }
 
 .saveBtn{
-
   background: #22af47 !important;
   color: $white;
   margin-right: 30px !important;
@@ -1133,32 +1122,32 @@ table {
 
 // Custom Css Start //
 
-.menu-NavBar{
+.menu-NavBar {
   box-shadow: none !important;
   background-color: #fff !important;
   font-weight: bold;
   color: $primary-dark;
   font-size: 15px;
 }
-.nav-active{
+.nav-active {
   font-size: 15px;
   font-weight: bolder;
   color: $primary;
   border-bottom: 2px solid $primary !important;
 }
-.breadcrumbText{
+.breadcrumbText {
   font-size: 25px;
-  color : $primary;
+  color: $primary;
 }
-.backBreadCrumb{
-  transition: .5s;
+.backBreadCrumb {
+  transition: 0.5s;
   opacity: 0.7;
 }
-.backBreadCrumb:hover{
+.backBreadCrumb:hover {
   cursor: pointer;
   opacity: 1;
 }
-::ng-deep td.mat-cell{
+::ng-deep td.mat-cell {
   padding: 15px !important;
 }
 // Custom Css End //
@@ -1167,7 +1156,7 @@ table {
   background-color: #f1f5ff !important;
 }
 
-.main-content{
+.main-content {
   background-color: #fff !important;
 }
 .filter_select_header{

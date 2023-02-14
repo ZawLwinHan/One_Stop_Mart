@@ -3,21 +3,16 @@ import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
-  selector: 'app-company-listing',
-  templateUrl: './company-listing.component.html',
-  styleUrls: ['./company-listing.component.scss'],
+  selector: 'app-company-master-listing',
+  templateUrl: './company-master-listing.component.html',
+  styleUrls: ['./company-master-listing.component.scss'],
 })
-export class CompanyListingComponent implements OnInit {
+export class CompanyMasterListingComponent implements OnInit {
   select = true;
   displayedColumns: string[] = [
     'select',
-    'profileImg',
-    'username',
-    'name',
-    'mobileNo',
     'companyName',
-    'usermail',
-    'userType',
+    'description',
     'isActive',
     'createdDateTime',
     'updatedDateTime',
@@ -61,13 +56,8 @@ export class CompanyListingComponent implements OnInit {
 }
 
 export interface PeriodicElement {
-  profileImg: string;
-  username: string;
-  name: string;
-  mobileNo: string;
   companyName: string;
-  usermail: string;
-  userType: string;
+  description: string;
   isActive: boolean;
   createdDateTime: string;
   updatedDateTime: string;
@@ -77,75 +67,56 @@ export interface PeriodicElement {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    profileImg: 'assets/img/user_images/profile-pic.jpg',
-    username: 'username001',
-    name: 'Aung Myo',
-    mobileNo: '+95 094201056021',
     companyName: 'Internet Wallet Myanmar',
-    usermail: 'aungmyo123@gmail.com',
-    userType: 'Admin',
+    description: 'Sales Department',
+    isActive: false,
+    createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
+    createdUserName: 'Aung Myo',
+    updatedUserName: 'Aung Myo',
+  },
+  {
+    companyName: 'Internet Wallet Myanmar',
+    description: 'Sales Department',
     isActive: true,
     createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
-    updatedDateTime: 'Mon, 09-Jan-2021 09:14:18',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
     createdUserName: 'Aung Myo',
     updatedUserName: 'Aung Myo',
   },
   {
-    profileImg: 'assets/img/user_images/profile.png',
-    username: 'username001',
-    name: 'Aung Myo',
-    mobileNo: '+95 094201056021',
     companyName: 'Internet Wallet Myanmar',
-    usermail: 'aungmyo123@gmail.com',
-    userType: 'Admin',
+    description: 'Sales Department',
     isActive: false,
     createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
-    updatedDateTime: 'Mon, 09-Jan-2021 09:14:18',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
     createdUserName: 'Aung Myo',
     updatedUserName: 'Aung Myo',
   },
-
   {
-    profileImg: 'assets/img/user_images/profile.png',
-    username: 'username001',
-    name: 'Aung Myo',
-    mobileNo: '+95 094201056021',
     companyName: 'Internet Wallet Myanmar',
-    usermail: 'aungmyo123@gmail.com',
-    userType: 'Admin',
+    description: 'Sales Department',
+    isActive: false,
+    createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
+    createdUserName: 'Aung Myo',
+    updatedUserName: 'Aung Myo',
+  },
+  {
+    companyName: 'Internet Wallet Myanmar',
+    description: 'Sales Department',
     isActive: true,
     createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
-    updatedDateTime: 'Mon, 09-Jan-2021 09:14:18',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
     createdUserName: 'Aung Myo',
     updatedUserName: 'Aung Myo',
   },
-
   {
-    profileImg: 'assets/img/user_images/profile-pic.jpg',
-    username: 'username001',
-    name: 'Aung Myo',
-    mobileNo: '+95 094201056021',
     companyName: 'Internet Wallet Myanmar',
-    usermail: 'aungmyo123@gmail.com',
-    userType: 'Admin',
-    isActive: false,
+    description: 'Sales Department',
+    isActive: true,
     createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
-    updatedDateTime: 'Mon, 09-Jan-2021 09:14:18',
-    createdUserName: 'Aung Myo',
-    updatedUserName: 'Aung Myo',
-  },
-
-  {
-    profileImg: 'assets/img/user_images/profile-pic.jpg',
-    username: 'username001',
-    name: 'Aung Myo',
-    mobileNo: '+95 094201056021',
-    companyName: 'Internet Wallet Myanmar',
-    usermail: 'aungmyo123@gmail.com',
-    userType: 'Admin',
-    isActive: false,
-    createdDateTime: 'Mon, 08-Jan-2021 09:10:20',
-    updatedDateTime: 'Mon, 09-Jan-2021 09:14:18',
+    updatedDateTime: 'Mon, 08-Jan-2021 09:10:20',
     createdUserName: 'Aung Myo',
     updatedUserName: 'Aung Myo',
   },

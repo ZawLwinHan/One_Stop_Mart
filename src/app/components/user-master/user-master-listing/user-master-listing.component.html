@@ -25,7 +25,7 @@
           matTooltip="Create New"
           aria-label="Button that displays a tooltip when focused or hovered over"
           routerlinkactive="active-link"
-          [routerLink]="'../create-user-master'"
+          [routerLink]="'./create-user-master'"
         />
         <img
           src="assets/img/new_icon/Edit.svg"
@@ -34,7 +34,7 @@
           matTooltip="Edit"
           aria-label="Button that displays a tooltip when focused or hovered over"
           routerlinkactive="active-link"
-          [routerLink]="'../edit-user-master'"
+          [routerLink]="'./edit-user-master'"
           *ngIf="selection.hasValue() || isAllSelected()"
         />
         <img
