@@ -17,24 +17,23 @@ import { MatCardModule } from '@angular/material/card';
 import { MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSelectModule} from '@angular/material/select';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatRadioModule} from '@angular/material/radio';
-import {MatListModule} from '@angular/material/list';
-import {MatToolbarModule} from "@angular/material/toolbar";
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { ConfirmAlertComponent } from './components/modal/confirm-alert/confirm-alert.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { ShopMasterFilterComponent } from './components/modal/shop-master-filter/shop-master-filter.component';
 import { AssignBackendModalComponent } from './components/modal/assign-backend-modal/assign-backend-modal.component';
-
-// @ts-ignore
+import { FlexModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,15 +69,17 @@ import { AssignBackendModalComponent } from './components/modal/assign-backend-m
     MatRadioModule,
     MatToolbarModule,
     BsDatepickerModule.forRoot(),
-    NgxMaterialTimepickerModule
-
+    NgxMaterialTimepickerModule,
+    NgxMaterialTimepickerModule,
+    FlexModule,
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: ReqInterceptor, multi: true
-    }
+      useClass: ReqInterceptor,
+      multi: true,
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

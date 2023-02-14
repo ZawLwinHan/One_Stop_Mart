@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-company-edit',
-  templateUrl: './company-edit.component.html',
-  styleUrls: ['./company-edit.component.scss'],
+  selector: 'app-create-user-master',
+  templateUrl: './create-user-master.component.html',
+  styleUrls: ['./create-user-master.component.scss'],
 })
-export class CompanyEditComponent implements OnInit {
-  checked = false;
-
+export class CreateUserMasterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
