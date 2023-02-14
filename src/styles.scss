@@ -693,7 +693,7 @@ mat-drawer {
   width: 80% !important;
   border-radius: 2px;
   border: 1px solid #f1f5ff !important;
-  background-color: $primary-light !important;
+  background-color: #eaf0ff !important;
 }
 .select2 {
   height: 50px;
@@ -703,10 +703,9 @@ mat-drawer {
   padding: 15px 15px;
   border-radius: 2px;
   border: 1px solid #f1f5ff;
-  background-color: $primary-light;
+  background-color: #eaf0ff;
 
   &:focus {
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   }
 }
 
@@ -754,7 +753,7 @@ mat-drawer {
 }
 
 .theme-green .bs-datepicker-body table td span.selected {
-  background-color: #263645 !important;
+  background-color: $primary !important;
 }
 
 .theme-green .bs-datepicker-body table td.week span {
@@ -1024,12 +1023,15 @@ table {
 
 // .secondary-table-pagination td{border: 1px solid $primary-light;
 // }
-
+.secondary-table-pagination th{
+  border-bottom: 10px solid #f1f5ff;
+}
 .secondary-table-pagination td {
   text-align: center;
   // border-right: 1px solid $primary-light;
   font-weight: 600;
   padding: 0px 25px !important;
+  border-top: 4px solid #f1f5ff;
 }
 
 .profileImageList {
@@ -1162,4 +1164,14 @@ table {
 }
 bs-datepicker-container, bs-daterangepicker-container {
   left: 110px !important;
+}
+.main-content{
+  background: #f1f5ff !important;
+}
+.filter_select_header{
+  background: $primary !important;
+  color:white;
+}
+tr.mat-header-row {
+  border-bottom: 8px solid #f1f5ff;
 }

@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-device-authorization.component.scss']
 })
 export class EditDeviceAuthorizationComponent implements OnInit {
+  selectedCounter: any|string;
 
+  counters = [
+    {value:'All Counter', viewValue : 'All Counter'},
+    {value:'Specific Counter', viewValue : 'Specific Counter'}
+  ]
   constructor() { }
 
   ngOnInit(): void {

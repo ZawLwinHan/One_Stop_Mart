@@ -35,20 +35,20 @@ export class RegisterUserListComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
+  showEdit:boolean = false;
+
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
   }
-
   /** Selects all rows if they are not all selected; otherwise clear selection. */
   toggleAllRows() {
     if (this.isAllSelected()) {
       this.selection.clear();
       return;
     }
-
     this.selection.select(...this.dataSource.data);
   }
 
@@ -57,7 +57,7 @@ export class RegisterUserListComponent implements OnInit {
     if (!row) {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row `;
+    return `${this.selection.isSelected(row) ? 'deselect': 'select'} row`;
   }
 
 }

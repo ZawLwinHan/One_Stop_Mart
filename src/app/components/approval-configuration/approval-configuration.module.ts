@@ -12,6 +12,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import { CreateRegisterUserComponent } from './create-register-user/create-register-user.component';
 import {MatSelectModule} from "@angular/material/select";
 import {FlexModule} from "@angular/flex-layout";
+import {FormsModule} from "@angular/forms";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
 import { EditRegisterUserComponent } from './edit-register-user/edit-register-user.component';
@@ -42,6 +43,7 @@ import { EditTransactionAmountComponent } from './edit-transaction-amount/edit-t
     MatTooltipModule,
     MatToolbarModule,
     MatPaginatorModule,
+    FormsModule,
     MatTableModule,
     MatCheckboxModule,
     MatSelectModule,

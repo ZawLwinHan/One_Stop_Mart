@@ -23,6 +23,7 @@ export class DeviceAuthorizationComponent implements OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
+  showEdit:boolean = false;
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {

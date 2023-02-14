@@ -15,6 +15,7 @@ export class TransactionAmountListComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  showEdit:boolean = false;
 
   selection = new SelectionModel<PeriodicElement>(true, []);
 

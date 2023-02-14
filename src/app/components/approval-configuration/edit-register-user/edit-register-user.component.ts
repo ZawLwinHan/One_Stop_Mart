@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-register-user.component.scss']
 })
 export class EditRegisterUserComponent implements OnInit {
+  selectedCounter: any|string;
 
+  counters = [
+    {value:'All Counter', viewValue : 'All Counter'},
+    {value:'Specific Counter', viewValue : 'Specific Counter'}
+  ]
   constructor() { }
 
   ngOnInit(): void {
