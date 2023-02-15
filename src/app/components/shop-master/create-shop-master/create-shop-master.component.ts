@@ -66,10 +66,7 @@ export class CreateShopMasterComponent implements OnInit {
 
   dataSource = ELEMENT_DATA;
   dataSource1 = ELEMENT_DATA1;
-
-
-
-
+  
   companynames: string[] = ['Consumer Goods Myanmar limited', 'CGM Company Limited'];
   states: string[] = ['Yangon', 'Bago','Ayeyawady'];
   cities: string[] = ['Yangon', 'Bago','Ayeyawady'];

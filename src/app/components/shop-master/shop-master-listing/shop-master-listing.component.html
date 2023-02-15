@@ -8,10 +8,10 @@
         <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'./create-shop-master'">
-        <img src="assets/img/new_icon/Edit.svg" alt="" class="crud-btns" matTooltip="Edit"
+        <img src="assets/img/new_icon/Edit.svg" alt="" *ngIf="selection.hasValue() || isAllSelected()"  class="crud-btns" matTooltip="Edit"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'./edit-shop-master'">
-        <img src="assets/img/new_icon/Delete.svg" alt="" class="crud-btns" matTooltip="Delete"
+        <img src="assets/img/new_icon/Delete.svg" alt="" *ngIf="selection.hasValue() || isAllSelected()" class="crud-btns" matTooltip="Delete"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link">
         <img  class="crud-btns" matTooltip="Filter"
               aria-label="Button that displays a tooltip when focused or hovered over" src="assets/img/new_icon/Filter.svg" alt="" >
@@ -81,7 +81,7 @@
 
     <ng-container matColumnDef="isActive">
       <th mat-header-cell *matHeaderCellDef> Is Active </th>
-      <td mat-cell *matCellDef="let element" class="{{element.isActive==true? 'text-success':'text-danger'}}">{{element.isActive==true? 'Yes':'No'}}</td>
+      <td mat-cell *matCellDef="let element" class="{{element.isActive==true? 'text-primary':'text-danger'}}">{{element.isActive==true? 'Yes':'No'}}</td>
     </ng-container>
 
     <ng-container matColumnDef="dateTime">

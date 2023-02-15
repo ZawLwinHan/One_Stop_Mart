@@ -1,4 +1,4 @@
-<div class="main-content container-fluid p-3">
+<div class="p-3">
   <div class="row">
     <div
       class="py-3 d-block d-md-flex justify-content-between align-items-center"
@@ -8,52 +8,54 @@
       </div>
     </div>
   </div>
-  <div class="row py-2">
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <div>
-        <mat-label for="">Company Name<span>*</span></mat-label>
-      </div>
-      <br />
-      <mat-select
-        class="select2"
-        multiple
-        disableOptionCentering
-        panelClass="myPanelClass"
-        placeholder="Select"
-      >
-        <div
-          fxLayout="row"
-          fxLayout.xs="column"
-          fxLayoutAlign.xs="start start"
-          class="filter_select_header"
-          fxLayoutAlign="space-between center"
+  <div class="main-content container-fluid ">
+    <div class="row py-2">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div>
+          <mat-label for="">Company Name<span>*</span></mat-label>
+        </div>
+        <br />
+        <mat-select
+          class="select2"
+          multiple
+          disableOptionCentering
+          panelClass="myPanelClass"
+          placeholder="Select"
         >
           <div
             fxLayout="row"
-            fxLayoutAlign="center center"
-            class="filter_text filterRow"
+            fxLayout.xs="column"
+            fxLayoutAlign.xs="start start"
+            class="filter_select_header"
+            fxLayoutAlign="space-between center"
           >
-            <mat-form-field appearance="standard">
-              <input
-                matInput
-                class="select_search_box"
-                placeholder="Enter Keywords"
-              />
-            </mat-form-field>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              class="filter_text filterRow"
+            >
+              <mat-form-field appearance="standard">
+                <input
+                  matInput
+                  class="select_search_box"
+                  placeholder="Enter Keywords"
+                />
+              </mat-form-field>
+            </div>
           </div>
-        </div>
-        <mat-option value="1">Internet Wallet Myanmar Limited</mat-option>
-        <mat-option value="2">One Stop Mart Tarmwe</mat-option>
-        <mat-option value="3">One Stop Mart North Dagon</mat-option>
-        <mat-option value="4">One Stop Mart Insein</mat-option>
-      </mat-select>
-    </div>
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input">Role Name<span>*</span></mat-label>
-        <input matInput class="input1" placeholder="Enter User Name" />
-      </mat-form-field>
+          <mat-option value="1">Internet Wallet Myanmar Limited</mat-option>
+          <mat-option value="2">One Stop Mart Tarmwe</mat-option>
+          <mat-option value="3">One Stop Mart North Dagon</mat-option>
+          <mat-option value="4">One Stop Mart Insein</mat-option>
+        </mat-select>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Role Name<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter User Name" />
+        </mat-form-field>
+      </div>
     </div>
   </div>
 </div>
