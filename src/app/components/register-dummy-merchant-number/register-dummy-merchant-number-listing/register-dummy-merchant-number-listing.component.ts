@@ -8,6 +8,8 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./register-dummy-merchant-number-listing.component.scss'],
 })
 export class RegisterDummyMerchantNumberListingComponent implements OnInit {
+  showEdit:boolean = false;
+
   select = true;
   displayedColumns: string[] = [
     'select',

@@ -8,106 +8,108 @@
       </div>
     </div>
   </div>
-  <div class="row py-2">
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input">Company Name<span>*</span></mat-label>
-        <input matInput class="input1" placeholder="Enter Company Name" />
-      </mat-form-field>
-    </div>
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input">Advance Number<span>*</span></mat-label>
-        <span
-          class="country-flag mobileInput"
-          matPrefix
-          style="display: flex; vertical-align: baseline"
-        >
+  <div class="bg-white p-3">
+    <div class="row py-2">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Company Name<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Company Name" />
+        </mat-form-field>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Advance Number<span>*</span></mat-label>
+          <span
+            class="country-flag mobileInput"
+            matPrefix
+            style="display: flex; vertical-align: baseline"
+          >
           &nbsp;<span style="font-size: 14px">+95</span>
         </span>
-        <input
-          matInput
-          class="input1 paddingBottom-2"
-          placeholder=""
-          style="padding-left: 50px !important; width: 75% !important"
-        />
-        <mat-icon matSuffix></mat-icon>
-      </mat-form-field>
-    </div>
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input"
+          <input
+            matInput
+            class="input1 paddingBottom-2"
+            placeholder=""
+            style="padding-left: 50px !important; width: 75% !important"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
           >Dummy Merchant Name<span>*</span></mat-label
-        >
-        <input
-          matInput
-          class="input1"
-          placeholder="Enter Dummy Merchant Name"
-        />
-      </mat-form-field>
+          >
+          <input
+            matInput
+            class="input1"
+            placeholder="Enter Dummy Merchant Name"
+          />
+        </mat-form-field>
+      </div>
     </div>
-  </div>
 
-  <div class="row py-2">
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input"
+    <div class="row py-2">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
           >Dummy Merchant Number<span>*</span></mat-label
-        >
-        <span
-          class="country-flag mobileInput"
-          matPrefix
-          style="display: flex; vertical-align: baseline"
-        >
+          >
+          <span
+            class="country-flag mobileInput"
+            matPrefix
+            style="display: flex; vertical-align: baseline"
+          >
           &nbsp;<span style="font-size: 14px">+95</span>
         </span>
-        <input
-          matInput
-          class="input1 paddingBottom-2"
-          placeholder=""
-          style="padding-left: 50px !important; width: 75% !important"
-        />
-        <mat-icon matSuffix></mat-icon>
-      </mat-form-field>
-    </div>
+          <input
+            matInput
+            class="input1 paddingBottom-2"
+            placeholder=""
+            style="padding-left: 50px !important; width: 75% !important"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
 
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always" class="changePswrd-input">
-        <mat-label class="label-input"
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always" class="changePswrd-input">
+          <mat-label class="label-input"
           >Dummy Merchant Password<span>*</span></mat-label
-        >
-        <input
-          matInput
-          type="{{ hide ? 'password' : 'text' }}"
-          class="input1"
-          placeholder="Enter Dummy Merchant Password"
-        />
-        <mat-icon matSuffix (click)="reveal()" class="pointer eye-icon">{{
-          hide ? "visibility_off" : "visibility"
-        }}</mat-icon>
-      </mat-form-field>
+          >
+          <input
+            matInput
+            type="{{ hide ? 'password' : 'text' }}"
+            class="input1"
+            placeholder="Enter Dummy Merchant Password"
+          />
+          <mat-icon matSuffix (click)="reveal()" class="pointer eye-icon">{{
+            hide ? "visibility_off" : "visibility"
+            }}</mat-icon>
+        </mat-form-field>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Father Name<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Father Name" />
+        </mat-form-field>
+      </div>
     </div>
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input">Father Name<span>*</span></mat-label>
-        <input matInput class="input1" placeholder="Enter Father Name" />
-      </mat-form-field>
-    </div>
-  </div>
 
-  <div class="row py-2">
-    <div class="my-2 col-12 col-md-6 col-lg-4">
-      <br />
-      <mat-form-field floatLabel="always">
-        <mat-label class="label-input">Business Name<span>*</span></mat-label>
-        <input matInput class="input1" placeholder="Enter Business Name" />
-      </mat-form-field>
+    <div class="row py-2">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Business Name<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Business Name" />
+        </mat-form-field>
+      </div>
     </div>
   </div>
 </div>

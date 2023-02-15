@@ -1,4 +1,4 @@
-<div class="main-content container-fluid p-3">
+<div class="p-3">
   <div class="row">
     <div style="border-bottom: 1px solid #D4D6D8;">
       <button mat-raised-button class="menu-NavBar nav-active" [routerLink]="'../../approveConfig'">Register New User</button>
@@ -13,7 +13,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-white p-3">
+  <div class="main-content bg-white container-fluid p-3">
     <div class="row py-2">
       <div class="my-2 col-12 col-md-6 col-lg-4 ">
         <div>
@@ -153,10 +153,11 @@
       </div>
     </div>
   </div>
+  <mat-toolbar>
+    <div class="button_group">
+      <button class="noBtn" mat-button [routerLink]="'../../approveConfig'">Cancel</button>
+      <button class="yesBtn" mat-button  [routerLink]="'../../approveConfig'">Save</button>
+    </div>
+  </mat-toolbar>
+
 </div>
-<mat-toolbar>
-  <div class="button_group">
-    <button class="noBtn" mat-button [routerLink]="'../../approveConfig'">Cancel</button>
-    <button class="yesBtn" mat-button  [routerLink]="'../../approveConfig'">Save</button>
-  </div>
-</mat-toolbar>
