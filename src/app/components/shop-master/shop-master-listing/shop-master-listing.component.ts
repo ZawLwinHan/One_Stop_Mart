@@ -14,6 +14,8 @@ import { active } from 'd3';
   styleUrls: ['./shop-master-listing.component.scss']
 })
 export class ShopMasterListingComponent  implements AfterViewInit {
+  showEdit:boolean = false;
+
 
   // constructor(public dialog: MatDialog) {}
   // // openDialog() {
