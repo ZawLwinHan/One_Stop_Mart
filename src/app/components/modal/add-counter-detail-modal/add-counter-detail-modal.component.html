@@ -8,41 +8,42 @@
       <div class="content_outer">
       <div class="row">
             
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+            <div class="my-2 col-12 col-md-6 col-lg-6 ">
               <br>
               <mat-form-field floatLabel="always">
                   <mat-label class="label-input">Counter No.<span>*</span></mat-label>
                   <input matInput class="input1" placeholder="Enter Counter No">
               </mat-form-field>
             </div>
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+            <div class="my-2 col-12 col-md-6 col-lg-6 ">
               <br>
               <mat-form-field floatLabel="always">
                   <mat-label class="label-input">Counter Name<span>*</span></mat-label>
                   <input matInput class="input1" placeholder="Enter Counter Name">
               </mat-form-field>
             </div>
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <div>
-                  <mat-label for="">Advance Merchant Number(Cash Out)<span>*</span></mat-label>
-                </div>
-                <br>
-                <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                    fxLayoutAlign="space-between center">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                      <mat-form-field appearance="standard">
-                        <input matInput class="select_search_box" placeholder="Enter Keywords">
-                      </mat-form-field>
-                    </div>
-                  </div>
-                  <mat-option *ngFor="let advanceno of advancenumbers" [value]="advanceno">{{advanceno}}</mat-option>
-                </mat-select>
-            </div>
+            
       </div>
-      
       <div class="row">
-        <div class="my-2 col-12 col-md-6 col-lg-4 ">
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+            <div>
+              <mat-label for="">Advance Merchant Number(Cash Out)<span>*</span></mat-label>
+            </div>
+            <br>
+            <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+                fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                  <mat-form-field appearance="standard">
+                    <input matInput class="select_search_box" placeholder="Enter Keywords">
+                  </mat-form-field>
+                </div>
+              </div>
+              <mat-option *ngFor="let advanceno of advancenumbers" [value]="advanceno">{{advanceno}}</mat-option>
+            </mat-select>
+        </div>
+
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
             <div>
               <mat-label for="">Cash Out Number<span>*</span></mat-label>
             </div>
@@ -59,8 +60,13 @@
               <mat-option *ngFor="let cashoutno of cashoutnumbers" [value]="cashoutno">{{cashoutno}}</mat-option>
             </mat-select>
         </div>
+
+      </div>
+      
+      <div class="row">
+      
           
-        <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div class="my-2 col-12 col-md-6 col-lg-6">
           <br>
           <mat-form-field floatLabel="always" class="changePswrd-input">
             <mat-label class="label-input">Cash Out Account Password</mat-label>
@@ -70,7 +76,7 @@
           </mat-form-field>
         </div>
 
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
+          <div class="my-2 col-12 col-md-6 col-lg-6 ">
             <div>
               <mat-label for="">Advance Merchant Number(Pay With OK$)<span>*</span></mat-label>
             </div>
@@ -90,7 +96,7 @@
       </div>
 
       <div class="row">
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
+            <div class="my-2 col-12 col-md-6 col-lg-6 ">
               <div>
                 <mat-label for="">Pay With OK$ Number<span>*</span></mat-label>
               </div>
@@ -108,7 +114,7 @@
               </mat-select>
             </div>
           
-            <div class="my-2 col-12 col-md-6 col-lg-4">
+            <div class="my-2 col-12 col-md-6 col-lg-6">
               <br>
               <mat-form-field floatLabel="always" class="changePswrd-input">
                 <mat-label class="label-input">Pay With OK$ Account Password</mat-label>

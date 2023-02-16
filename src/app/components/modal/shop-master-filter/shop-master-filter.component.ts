@@ -21,13 +21,16 @@ export class ShopMasterFilterComponent {
     this.dialogRef.close();
   }
 
-  advancenumbers: string[] = ['+95 0912345678', '+95 09750 123 456'];
-  cashoutnumbers:string[] = ['+95 09452 123 456 ', '+95 09662 345 671'];
-  ampaywithokdollarnumbers: string[] = ['+95 0912345678', '+95 09750 123 456'];
-  paywithokdollarnumbers: string[] = ['+95 0912345678', '+95 09750 123 456'];
-
+  companynames: string[] = ['One Stop Mart Insein', 'One Stop Mart Tarmwe','One Stop Mart North Dagon'];
+  shopcodes:string[] = ['054', '021','045'];
+  shopnames:string[] = ['054 Myint Thar', '021 Shwe Bone Thar','045 Bo Aung Kyaw'];
+  contactNumbers:string[] = ['+95 0912345678', '+95 09750 123 456','+95 09750 123 456'];
+  townships:string[] =['Yangon', 'Bago','Ayeyawady'];
+  noOfcounters:string[] =['1', '2','3'];
+  totalUserNumbers:string[] =['1', '2','3'];
   reveal(){
     this.hide = !this.hide
   }
+  statelists= new FormControl;
 
 }

@@ -5,125 +5,230 @@
       <img src="assets/img/icon/x.svg" alt="" class="close" (click)="onDismiss()">
     </div>
     <mat-dialog-content class="mat-typography">
-      <div class="content_outer">
+      <div class="content_outer">  
       <div class="row">
-            
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <br>
-              <mat-form-field floatLabel="always">
-                  <mat-label class="label-input">Counter No.<span>*</span></mat-label>
-                  <input matInput class="input1" placeholder="Enter Counter No">
-              </mat-form-field>
-            </div>
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <br>
-              <mat-form-field floatLabel="always">
-                  <mat-label class="label-input">Counter Name<span>*</span></mat-label>
-                  <input matInput class="input1" placeholder="Enter Counter Name">
-              </mat-form-field>
-            </div>
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <div>
-                  <mat-label for="">Advance Merchant Number(Cash Out)<span>*</span></mat-label>
-                </div>
-                <br>
-                <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                    fxLayoutAlign="space-between center">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                      <mat-form-field appearance="standard">
-                        <input matInput class="select_search_box" placeholder="Enter Keywords">
-                      </mat-form-field>
-                    </div>
-                  </div>
-                  <mat-option *ngFor="let advanceno of advancenumbers" [value]="advanceno">{{advanceno}}</mat-option>
-                </mat-select>
-            </div>
-      </div>
-      
-      <div class="row">
-        <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <div>
-              <mat-label for="">Cash Out Number<span>*</span></mat-label>
-            </div>
-            <br>
-            <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                fxLayoutAlign="space-between center">
-                <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                  <mat-form-field appearance="standard">
-                    <input matInput class="select_search_box" placeholder="Enter Keywords">
-                  </mat-form-field>
-                </div>
-              </div>
-              <mat-option *ngFor="let cashoutno of cashoutnumbers" [value]="cashoutno">{{cashoutno}}</mat-option>
-            </mat-select>
-        </div>
-          
-        <div class="my-2 col-12 col-md-6 col-lg-4">
+ 
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Company Name</mat-label>
+          </div>
           <br>
-          <mat-form-field floatLabel="always" class="changePswrd-input">
-            <mat-label class="label-input">Cash Out Account Password</mat-label>
-            <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Enter Cash Out Account Password">
-            <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option *ngFor="let companyName of companynames" [value]="companyName">{{companyName}}</mat-option>
 
-          </mat-form-field>
+           
+          </mat-select>
         </div>
 
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <div>
-              <mat-label for="">Advance Merchant Number(Pay With OK$)<span>*</span></mat-label>
-            </div>
-            <br>
-            <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                fxLayoutAlign="space-between center">
-                <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                  <mat-form-field appearance="standard">
-                    <input matInput class="select_search_box" placeholder="Enter Keywords">
-                  </mat-form-field>
-                </div>
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Shop Code</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
               </div>
-              <mat-option *ngFor="let  ampaywithokdollarno of ampaywithokdollarnumbers" [value]="ampaywithokdollarno">{{ampaywithokdollarno}}</mat-option>
-            </mat-select>
-         </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option *ngFor="let shopcode of shopcodes" [value]="shopcode">{{shopcode}}</mat-option>
+
+           
+          </mat-select>
+        </div>
+          
       </div>
 
       <div class="row">
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <div>
-                <mat-label for="">Pay With OK$ Number<span>*</span></mat-label>
+ 
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Shop Name</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
               </div>
-              <br>
-              <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                  fxLayoutAlign="space-between center">
-                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                    <mat-form-field appearance="standard">
-                      <input matInput class="select_search_box" placeholder="Enter Keywords">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <mat-option *ngFor="let  ampaywithokdollarno of ampaywithokdollarnumbers" [value]="ampaywithokdollarno">{{ampaywithokdollarno}}</mat-option>
-              </mat-select>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
             </div>
+            <mat-option *ngFor="let shopName of shopnames" [value]="shopName">{{shopName}}</mat-option>
+
+           
+          </mat-select>
+        </div>
+
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Contact Number</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option *ngFor="let contactNumber of contactNumbers" [value]="contactNumber">{{contactNumber}}</mat-option>
+
+           
+          </mat-select>
+        </div>
           
-            <div class="my-2 col-12 col-md-6 col-lg-4">
-              <br>
-              <mat-form-field floatLabel="always" class="changePswrd-input">
-                <mat-label class="label-input">Pay With OK$ Account Password</mat-label>
-                <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Pay With OK$ Account Password">
-                <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide1? 'visibility_off' : 'visibility'}}</mat-icon>
-    
-              </mat-form-field>
+      </div>
+
+      <div class="row">
+ 
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Township</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
             </div>
+            <mat-option *ngFor="let township of townships" [value]="township">{{township}}</mat-option>
+
+           
+          </mat-select>
+        </div>
+
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Number of Counters</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option *ngFor="let noOfcounter of noOfcounters" [value]="noOfcounter">{{noOfcounter}}</mat-option>
+
+           
+          </mat-select>
+        </div>
+             
+      </div>
+
+      <div class="row">
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
+          <div>
+            <mat-label for="">Total Number of Users</mat-label>
+          </div>
+          <br>
+          <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
+            
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
+              fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
+                <mat-form-field appearance="standard">
+                  <input matInput class="select_search_box" placeholder="Enter Keywords">
+                </mat-form-field>
+              </div>
+              <button fxLayout="row" mat-button class="check_uncheck_btn">
+                <mat-icon class="secondary-text s-5">
+                  check</mat-icon>Check All
+              </button>
+              <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+                <mat-icon class="secondary-text s-5">
+                  clear</mat-icon>Uncheck All
+              </button>
+            </div>
+            <mat-option *ngFor="let totalUserNo of totalUserNumbers" [value]="totalUserNo">{{totalUserNo}}</mat-option>
+
+           
+          </mat-select>
+        </div>
+             
       </div>
       </div>
     </mat-dialog-content>
  
-    <div class="button_group  text-center">
+    <div class="button_group m-3 text-center">
       <button class="noBtn" (click)="onDismiss()">Cancel</button>
-      <button class="saveandsend" (click)="onDismiss()">Add & Continue</button>
+      <button class="apply" (click)="onDismiss()">Apply</button>
     </div>
   </div>
   

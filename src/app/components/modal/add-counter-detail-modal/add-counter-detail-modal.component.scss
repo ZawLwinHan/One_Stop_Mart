@@ -198,9 +198,15 @@ mat-form-field .select_search_box{
   .eye-icon{
     position: absolute;
     top: -44px;
-    right: 36px;
+    right: 91px !important;
   }
 
   .mat-dialog-container{
     overflow: hidden !important;
   }
+
+  .content_outer{
+    padding: 15px 20px 20px;
+    height: calc(60vh - 80px);
+    overflow: auto;
+}
