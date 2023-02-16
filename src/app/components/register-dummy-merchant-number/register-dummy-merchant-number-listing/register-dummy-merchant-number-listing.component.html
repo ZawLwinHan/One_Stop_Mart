@@ -28,7 +28,13 @@
           [routerLink]="'./create-register-dummy-merchant-number'"
         />
         <img
-          *ngIf="selection.hasValue() && !isAllSelected() && selection.selected.length === 1 ? !showEdit : showEdit"
+          *ngIf="
+            selection.hasValue() &&
+            !isAllSelected() &&
+            selection.selected.length === 1
+              ? !showEdit
+              : showEdit
+          "
           src="assets/img/new_icon/Edit.svg"
           alt=""
           class="crud-btns"

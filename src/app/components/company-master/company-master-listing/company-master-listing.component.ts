@@ -8,7 +8,9 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrls: ['./company-master-listing.component.scss'],
 })
 export class CompanyMasterListingComponent implements OnInit {
-  select = true;
+  select: boolean = true;
+  showEdit: boolean = false;
+
   displayedColumns: string[] = [
     'select',
     'companyName',
