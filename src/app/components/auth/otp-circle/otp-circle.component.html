@@ -1,6 +1,6 @@
 <div class="login_bg">
-        <div class="d-flex h_100">    
-            <div class="login_content justify-content-center align-items-center justify-content-lg-end" > 
+        <div class="d-flex h_100">
+            <div class="login_content justify-content-center align-items-center justify-content-lg-end" >
                 <div>
                     <h3 class="otp_head mb-3">Forget Password?</h3>
                     <p class="otp_expire mb-0" *ngIf="!isTimeUp">OTP Expire in</p>
@@ -13,31 +13,14 @@
                             <text x="50%" y="-50%" text-anchor="middle" stroke="#000000" stroke-width="2px" dy=".3em">{{coutDownSecounds}}</text>
                         </svg>
                     </div>
-                    <!-- </div> -->
-                
-                    <div style="text-align: center;position: relative;">
-                        <input type="text" placeholder="Enter OTP" autocomplete="off" cdkAutofill="off"><br>
-                        <div class="input_image_box">
-                            <img src="../../../../assets/img/icon/password.svg" alt="" style="width: 20px;">
-                        </div>
-                    </div>
-                
-                    <p class="enter_otp" *ngIf="!isTimeUp">Enter OTP received via SMS on your registered mobile number</p>
-                
+
                     <div *ngIf="!isTimeUp" style="text-align: center;margin-top: 10px;" >
                         <button type="submit" class="submit" (click)="otpSubmit()" routerLink="/auth/reset-password">SUBMIT</button>
                     </div>
-                    <div *ngIf="isTimeUp" style="text-align: center;margin-top: 20px;" >
-                        <button type="submit" class="submit" (click)="resentOtp()" >RESEND OTP</button>
-                    </div>
-                    <div style="text-align: center;" >
-                        <button type="submit" class="cancel"  (click)="otpCancel()">CANCEL</button>
-                    </div>
                  </div>
-               
+
             </div>
        </div>
     </div>
 
 
-   

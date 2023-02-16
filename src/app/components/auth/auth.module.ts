@@ -11,9 +11,10 @@ import { DemoMaterialModule } from 'src/app/shared/modules/material-module';
 import { ResendOtpComponent } from './resend-otp/resend-otp.component';
 import { EnterOtpComponent } from './enter-otp/enter-otp.component';
 import { OtpCircleComponent } from './otp-circle/otp-circle.component';
+import { UserLoginOtpComponent } from './user-login-otp/user-login-otp.component';
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, ResetPasswordComponent, ResendOtpComponent, EnterOtpComponent, OtpCircleComponent],
+  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, ResetPasswordComponent, ResendOtpComponent, EnterOtpComponent, OtpCircleComponent, UserLoginOtpComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
