@@ -1,1 +1,12 @@
-<p>user-login-otp works!</p>
+<div>
+  <p class="otp_expire mb-0" *ngIf="!isTimeUp">OTP Expire in</p>
+  <p class="otp_expire mb-2" *ngIf="isTimeUp">OTP Expired</p>
+  <!-- <div class="timer"> -->
+  <div class="item" *ngIf="!isTimeUp">
+    <svg width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+      <circle id="circle" class="circle_animation" r="69.85699" cy="81" cx="81" stroke-width="8" stroke="yellow" fill="white"/>
+      <text x="50%" y="-50%" text-anchor="middle" stroke="#000000" stroke-width="2px" dy=".3em">{{coutDownSecounds}}</text>
+    </svg>
+  </div>
+
+</div>

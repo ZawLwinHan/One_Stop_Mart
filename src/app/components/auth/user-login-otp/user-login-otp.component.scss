@@ -1,0 +1,62 @@
+
+.otp_head{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.otp_expire{
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+// timer
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  transform: rotate(-90deg);
+
+  text {
+    transform: rotate(90deg);
+  }
+}
+
+.circle_animation {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  transition: all 1s linear;
+}
+
+.enter_otp{
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 320px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 1551px){
+  #circle{
+    r:35 !important;
+    cy:50;
+    cx:50;
+  }
+  .circle_animation {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: all 39s linear;
+  }
+  .item svg{
+    width: 100px;
+    height: 100px;
+  }
+  ::ng-deep.login-wrapper{
+    padding: 24px 24px 25px !important;
+  }
+}
