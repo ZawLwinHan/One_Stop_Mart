@@ -2,12 +2,12 @@
   <div class="d-flex h_100">
       <div class="login_content justify-content-center align-items-center justify-content-lg-end" >
           <div></div>
-          <div class=" me-lg-5 pe-lg-5">
-            <div class="">
-              <img src="../../../../assets/img/icon/OK$%20logo%20.svg" class="me-3" alt="" style="width: 120px">
-              <h3 class="d-inline-block fw-bolder fs-1" style="color: #224193">One Stop Mart</h3>
+          <div class="">
+            <div class="d-flex align-items-center">
+              <img src="../../../../assets/img/icon/OK$%20logo%20.svg" class="me-3" alt="" style="width: 80px">
+              <h3 class="d-inline-block fw-bolder fs-1 mb-0" style="color: #224193">- Point of Sale Management</h3>
             </div>
-            <form action="" [formGroup]="login_form" (ngSubmit)="login()">
+            <form action="" [formGroup]="login_form" (ngSubmit)="login()" *ngIf="!otp_page">
               <div class="login-wrapper">
                 <div class="d-flex position-relative">
                   <input type="text" placeholder="User Name" autocomplete="off" cdkAutofill="off" formControlName="user_name">
@@ -33,7 +33,36 @@
                   <mat-checkbox class="remember_me text-white">Remember Me</mat-checkbox>
                 </div>
                 <div style="text-align: center;margin-top: 20px;">
-                  <button type="submit" class="login_btn" >LOGIN</button>
+                  <button type="submit" class="login_btn" (click)="otp_page=true">LOGIN</button>
+                </div>
+              </div>
+            </form>
+
+            <!--OTP PAGE-->
+            <form action=""  *ngIf="otp_page" (ngSubmit)="login()">
+              <div class="login-wrapper">
+                <div class="d-flex position-relative">
+                  <input type="text" readonly value="+95 421052949"  autocomplete="off" cdkAutofill="off" formControlName="user_name">
+                  <div class="input_image_box">
+                    <img src="../../../../assets/img/icon/user.png" alt="" style="width: 20px;">
+                  </div>
+                </div>
+                <div class="position-relative text-center" style="margin-top: 45px;">
+                  <div class="input_image_box">
+                    <img src="" alt="" style="width: 20px;">
+                  </div>
+
+                  <input type="password" placeholder="Password" autocomplete="off" formControlName="password"/>
+                  <div class="input_image_box">
+                    <img src="../../../../assets/img/icon/password.svg" alt="" style="width: 20px;">
+                  </div>
+                </div>
+                <div class="forgot_password">
+                  <a class="text-decoration-none" routerLink="/auth/forgot-password">Enter OTP Received vis SMS on your registered mobile number</a>
+                </div>
+
+                <div style="text-align: center;margin-top: 20px;">
+                  <button type="submit" class="login_btn" >GET OTP</button>
                 </div>
               </div>
             </form>

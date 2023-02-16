@@ -11,24 +11,24 @@
           </svg>
       </div>
       <!-- </div> -->
-  
+
       <div style="text-align: center;position: relative;">
           <input type="text" placeholder="Enter OTP" autocomplete="off" cdkAutofill="off"><br>
           <div class="input_image_box">
               <img src="../../../../assets/img/icon/password.svg" alt="" style="width: 20px;">
           </div>
       </div>
-  
+
       <p class="enter_otp" *ngIf="!isTimeUp">Enter OTP received via SMS on your registered mobile number</p>
-  
+
       <div *ngIf="!isTimeUp" style="text-align: center;margin-top: 10px;" >
           <button type="submit" class="submit" (click)="otpSubmit()" routerLink="/auth/reset-password">SUBMIT</button>
       </div>
       <div *ngIf="isTimeUp" style="text-align: center;margin-top: 20px;" >
-          <button type="submit" class="submit" (click)="resentOtp()" >RESEND OTP</button>
+          <button type="submit" class="submit" (click)="resentOtp()" >GET NEW OTP</button>
       </div>
       <div style="text-align: center;" >
           <button type="submit" class="cancel"  (click)="otpCancel()">CANCEL</button>
       </div>
-  
+
   </div>

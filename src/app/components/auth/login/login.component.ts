@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   showPassword = false;
   login_form!: FormGroup;
   hide = true;
-  
+  otp_page : boolean = false;
   constructor( private route: Router,private _formBuilder: FormBuilder, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
