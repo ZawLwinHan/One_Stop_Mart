@@ -15,6 +15,7 @@ export class ShopMasterFilterComponent {
   ngOnInit(): void {
   }
   hide : boolean = true
+  hide1 : boolean = true
 
   onDismiss(){
     this.dialogRef.close();

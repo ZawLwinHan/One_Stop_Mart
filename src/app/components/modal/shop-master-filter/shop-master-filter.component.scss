@@ -207,5 +207,7 @@ mat-form-field .select_search_box{
     top: -44px;
     right: 36px;
   }
-  //Media Query End
-  
+
+  .mat-dialog-container{
+    overflow: hidden !important;
+  }

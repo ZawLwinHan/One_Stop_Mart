@@ -1,5 +1,4 @@
 <div>
-
     <div class="modal-header">
       <h4 class="text-warning">Add Counter Detail</h4>
       <i class="fa fa-close close" aria-hidden="true"></i>
@@ -114,18 +113,17 @@
               <mat-form-field floatLabel="always" class="changePswrd-input">
                 <mat-label class="label-input">Pay With OK$ Account Password</mat-label>
                 <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Pay With OK$ Account Password">
-                <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide? 'visibility_off' : 'visibility'}}</mat-icon>
+                <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide1? 'visibility_off' : 'visibility'}}</mat-icon>
     
               </mat-form-field>
             </div>
       </div>
-  
-        <div class="button_group  text-center">
-          <button class="noBtn" (click)="onDismiss()">Cancel</button>
-          <button class="saveandsend" (click)="onDismiss()">Add & Continue</button>
-        </div>
-        
       </div>
     </mat-dialog-content>
+ 
+    <div class="button_group  text-center">
+      <button class="noBtn" (click)="onDismiss()">Cancel</button>
+      <button class="saveandsend" (click)="onDismiss()">Add & Continue</button>
+    </div>
   </div>
   

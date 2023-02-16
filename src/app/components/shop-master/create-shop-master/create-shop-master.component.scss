@@ -52,10 +52,10 @@
   }
   .main-content
   {
-    height: calc(90vh - 60px);
+    height: calc(82vh - 60px);
     overflow: auto;
     overflow-x: hidden;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
   }
   
   mat-label span {
@@ -153,4 +153,11 @@
 
 .table-pagination{
   overflow: auto;
+}
+
+.add-btn{
+  width: 30px;
+}
+.margin-left{
+  margin-left: 60px !important;
 }
