@@ -36,6 +36,8 @@ import { AssignBackendModalComponent } from './components/modal/assign-backend-m
 import { FlexModule } from '@angular/flex-layout';
 import { RegisterUserFilterComponent } from './components/modal/register-user-filter/register-user-filter.component';
 import { AddCounterDetailModalComponent } from './components/modal/add-counter-detail-modal/add-counter-detail-modal.component';
+import { UserMasterFilterComponent } from './components/modal/user-master-filter/user-master-filter.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,7 @@ import { AddCounterDetailModalComponent } from './components/modal/add-counter-d
     AssignBackendModalComponent,
     RegisterUserFilterComponent,
     AddCounterDetailModalComponent,
+    UserMasterFilterComponent,
   ],
   imports: [
     BrowserModule,

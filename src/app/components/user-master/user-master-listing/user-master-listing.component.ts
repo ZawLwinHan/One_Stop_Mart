@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { UserMasterFilterComponent } from '../../modal/user-master-filter/user-master-filter.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-master-listing',
@@ -29,7 +31,14 @@ export class UserMasterListingComponent implements OnInit {
 
   selection = new SelectionModel<PeriodicElement>(true, []);
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
+
+  openDialog() {
+    this.dialog.open(UserMasterFilterComponent, {
+      width: '900px',
+      data: {},
+    });
+  }
 
   ngOnInit(): void {}
 
