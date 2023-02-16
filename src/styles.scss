@@ -1179,3 +1179,9 @@ bs-daterangepicker-container {
 tr.mat-header-row {
   border-bottom: 8px solid #f1f5ff;
 }
+
+@media screen and (max-width: 1551px){
+  .input1 {
+    width: 77% !important;
+  }
+}
