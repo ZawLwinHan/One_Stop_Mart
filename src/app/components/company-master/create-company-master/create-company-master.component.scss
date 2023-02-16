@@ -40,7 +40,7 @@ mat-form-field .select_search_box {
 }
 
 .mat-toolbar {
-  background-color: #f1f5ff;
+  background-color: #fafafa;
   display: block !important;
   text-align: center;
 }
@@ -52,7 +52,7 @@ mat-label span {
   color: #000;
 }
 .main-content {
-  height: calc(75vh - 60px);
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -91,5 +91,5 @@ input[type="checkbox"] {
 }
 
 .main-content {
-   background: #ffff !important; 
+  background: #ffff !important;
 }

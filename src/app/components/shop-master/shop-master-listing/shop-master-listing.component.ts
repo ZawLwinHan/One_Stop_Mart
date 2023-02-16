@@ -1,35 +1,31 @@
 import { AfterViewInit, Component, ViewChild, ViewEncapsulation  } from '@angular/core';
 
 import { MatPaginator } from '@angular/material/paginator';
-import { UserRolePermissionFilterComponent } from 'src/app/components/modal/user-role-permission-filter/user-role-permission-filter.component';
 import {MatTableDataSource} from '@angular/material/table';
 import {SelectionModel} from '@angular/cdk/collections';
 import { MatDialog } from '@angular/material/dialog';
 import { RouterLinkActive } from '@angular/router';
 import { active } from 'd3';
+import { ShopMasterFilterComponent } from '../../modal/shop-master-filter/shop-master-filter.component';
 
 @Component({
   selector: 'app-shop-master-listing',
   templateUrl: './shop-master-listing.component.html',
   styleUrls: ['./shop-master-listing.component.scss']
 })
+
 export class ShopMasterListingComponent  implements AfterViewInit {
 
-  // constructor(public dialog: MatDialog) {}
-  // // openDialog() {
-  // //   this.dialog.open(UserRolePermissionFilterComponent, {
-  // //     width: '900px',
-  // //     data: {}
-  // //   });
-  // }
+  
+  constructor(public dialog: MatDialog) { }
+  openDialog() {
+    this.dialog.open(ShopMasterFilterComponent, {
+      width: '1000px',
+      data: {}
+    });
+  }
 
-  // openDialog() {
-  //   const dialogRef = this.dialog.open(UserRolePermissionFilterComponent);
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(`Dialog result: ${result}`);
-  //   });
-  // }
+  showEdit:boolean = false;
 
   displayedColumns: string[] = ['select', 'companyName', 'shopCode', 'shopName', 'contactNumber',
     'township', 'noOfcounter', 'totalUser', 'isActive', 'dateTime', 'updateTime',
@@ -72,26 +68,6 @@ export class ShopMasterListingComponent  implements AfterViewInit {
 
 
 }
-
-
-// constructor(public dialog: MatDialog) { }
-
-  // ngOnInit(): void {
-
-  // }
-
-// filterTable();{
-//   const dialogRef = this.dialog.open(UserRolePermissionFilterComponent, {
-//     width: '850px',
-//     data: {}
-//     });
-
-//     dialogRef.afterClosed().subscribe(result => {
-//       if(result){}
-//   });
-// }
-
-
 
 export interface PeriodicElement {
   companyName:string;

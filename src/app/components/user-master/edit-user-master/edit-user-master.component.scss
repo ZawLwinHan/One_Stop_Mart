@@ -40,7 +40,7 @@ mat-form-field .select_search_box {
 }
 
 .mat-toolbar {
-  background-color: #f1f5ff;
+  background-color: #fafafa;
   display: block !important;
   text-align: center;
 }
@@ -52,8 +52,8 @@ mat-label span {
   color: #000;
 }
 .main-content {
-  background-color: #fff !important;
-  height: calc(75vh - 60px);
+  background-color: #ffff !important;
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -76,6 +76,7 @@ input[type="checkbox"] {
   background-color: #f1f5ff;
 }
 .upload {
+  position: absolute;
   vertical-align: middle;
 }
 ::-webkit-file-upload-button {
@@ -90,7 +91,21 @@ input[type="checkbox"] {
 .labelDiv {
   width: 369px;
 }
-
+.upload {
+  margin-top: 0px;
+}
+@media screen and (max-width: 1551px) {
+  .labelDiv {
+    width: 250px;
+  }
+  .fileuploadLabel {
+    font-size: 12.5px;
+  }
+  .upload {
+    font-size: 18px;
+    margin-top: 3px;
+  }
+}
 .checkbox-group {
   display: block;
   margin-bottom: 15px;

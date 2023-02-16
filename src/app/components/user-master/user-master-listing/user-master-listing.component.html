@@ -35,7 +35,13 @@
           aria-label="Button that displays a tooltip when focused or hovered over"
           routerlinkactive="active-link"
           [routerLink]="'./edit-user-master'"
-          *ngIf="selection.hasValue() || isAllSelected()"
+          *ngIf="
+            selection.hasValue() &&
+            !isAllSelected() &&
+            selection.selected.length === 1
+              ? !showEdit
+              : showEdit
+          "
         />
         <img
           src="assets/img/new_icon/Delete.svg"

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl} from "@angular/forms";
 import { MatDialog } from '@angular/material/dialog';
+import { AddCounterDetailModalComponent } from '../../modal/add-counter-detail-modal/add-counter-detail-modal.component';
 import { AssignBackendModalComponent } from '../../modal/assign-backend-modal/assign-backend-modal.component';
-import { ShopMasterFilterComponent } from '../../modal/shop-master-filter/shop-master-filter.component';
 
 export interface PeriodicElement {
   action:string;
@@ -45,7 +45,7 @@ export class CreateShopMasterComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
   openDialog() {
-    this.dialog.open(ShopMasterFilterComponent, {
+    this.dialog.open(AddCounterDetailModalComponent, {
       width: '1000px',
       data: {}
     });

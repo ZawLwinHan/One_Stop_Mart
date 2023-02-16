@@ -8,7 +8,8 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrls: ['./user-master-listing.component.scss'],
 })
 export class UserMasterListingComponent implements OnInit {
-  select = true;
+  showEdit: boolean = false;
+  select: boolean = true;
   displayedColumns: string[] = [
     'select',
     'profileImg',

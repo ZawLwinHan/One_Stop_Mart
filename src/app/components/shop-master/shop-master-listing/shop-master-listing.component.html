@@ -8,7 +8,7 @@
         <img src="assets/img/new_icon/Create.svg" alt="" class="crud-btns" matTooltip="Create New"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'./create-shop-master'">
-        <img src="assets/img/new_icon/Edit.svg" alt="" *ngIf="selection.hasValue() || isAllSelected()"  class="crud-btns" matTooltip="Edit"
+        <img src="assets/img/new_icon/Edit.svg" alt=""  *ngIf="selection.hasValue() && !isAllSelected() && selection.selected.length === 1 ? !showEdit : showEdit" class="crud-btns" matTooltip="Edit"
              aria-label="Button that displays a tooltip when focused or hovered over"   routerlinkactive="active-link"
              [routerLink]="'./edit-shop-master'">
         <img src="assets/img/new_icon/Delete.svg" alt="" *ngIf="selection.hasValue() || isAllSelected()" class="crud-btns" matTooltip="Delete"

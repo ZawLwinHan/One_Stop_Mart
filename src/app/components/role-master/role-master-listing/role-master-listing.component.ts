@@ -8,7 +8,9 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./role-master-listing.component.scss'],
 })
 export class RoleMasterListingComponent implements OnInit {
-  select = true;
+  showEdit: boolean = false;
+  select: boolean = true;
+
   displayedColumns: string[] = [
     'select',
     'companyName',

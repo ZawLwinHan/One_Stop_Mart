@@ -40,7 +40,7 @@ mat-form-field .select_search_box {
 }
 
 .mat-toolbar {
-  background-color: #f1f5ff !important;
+  background-color: #fafafa !important;
   display: block !important;
   text-align: center;
 }
@@ -52,88 +52,8 @@ mat-label span {
   color: #000;
 }
 .main-content {
-  background-color: #fff!important;
-  height: calc(75vh - 60px);
+  background-color: #fff !important;
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
-}
-.activeCheckBox {
-  margin-right: 8px;
-}
-input[type="checkbox"] {
-  transform: scale(1.5);
-}
-
-.upload-image,
-.uploadDiv {
-  height: 50px;
-  outline: none;
-  margin-bottom: 10px;
-  width: 85% !important;
-  padding: 15px 15px;
-  border-radius: 2px;
-  border: 1px solid #f1f5ff;
-  background-color: #f1f5ff;
-}
-.upload {
-  vertical-align: middle;
-}
-::-webkit-file-upload-button {
-  display: none;
-}
-::file-selector-button {
-  display: none;
-}
-#inputTag {
-  display: none;
-}
-.labelDiv {
-  width: 369px;
-}
-
-.checkbox-group {
-  display: block;
-  margin-bottom: 15px;
-}
-
-.checkbox-group input {
-  padding: 0;
-  height: initial;
-  width: initial;
-  margin-bottom: 0;
-  display: none;
-  cursor: pointer;
-}
-
-.checkbox-group label {
-  position: relative;
-  cursor: pointer;
-}
-
-.checkbox-group label:before {
-  content: "";
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 2px solid #06226c;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.checkbox-group input:checked + label:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 3px;
-  left: 9px;
-  width: 6px;
-  height: 14px;
-  border: solid #06226c;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
 }
