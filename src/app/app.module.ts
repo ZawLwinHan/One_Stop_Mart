@@ -37,6 +37,8 @@ import { FlexModule } from '@angular/flex-layout';
 import { RegisterUserFilterComponent } from './components/modal/register-user-filter/register-user-filter.component';
 import { AddCounterDetailModalComponent } from './components/modal/add-counter-detail-modal/add-counter-detail-modal.component';
 import { UserMasterFilterComponent } from './components/modal/user-master-filter/user-master-filter.component';
+import { RoleMasterFilterComponent } from './components/modal/role-master-filter/role-master-filter.component';
+import { RegisterDummyMerchantnumberFilterComponent } from './components/modal/register-dummy-merchantnumber-filter/register-dummy-merchantnumber-filter.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { UserMasterFilterComponent } from './components/modal/user-master-filter
     RegisterUserFilterComponent,
     AddCounterDetailModalComponent,
     UserMasterFilterComponent,
+    RoleMasterFilterComponent,
+    RegisterDummyMerchantnumberFilterComponent,
   ],
   imports: [
     BrowserModule,

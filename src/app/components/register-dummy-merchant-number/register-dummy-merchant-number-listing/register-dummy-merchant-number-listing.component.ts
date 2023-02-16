@@ -1,6 +1,8 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { RegisterDummyMerchantnumberFilterComponent } from '../../modal/register-dummy-merchantnumber-filter/register-dummy-merchantnumber-filter.component';
 
 @Component({
   selector: 'app-register-dummy-merchant-number-listing',
@@ -8,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./register-dummy-merchant-number-listing.component.scss'],
 })
 export class RegisterDummyMerchantNumberListingComponent implements OnInit {
-  showEdit:boolean = false;
+  showEdit: boolean = false;
 
   select = true;
   displayedColumns: string[] = [
@@ -30,7 +32,13 @@ export class RegisterDummyMerchantNumberListingComponent implements OnInit {
 
   selection = new SelectionModel<PeriodicElement>(true, []);
 
-  constructor() {}
+  openDialog() {
+    this.dialog.open(RegisterDummyMerchantnumberFilterComponent, {
+      width: '900px',
+      data: {},
+    });
+  }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 

@@ -1,6 +1,8 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { RoleMasterFilterComponent } from '../../modal/role-master-filter/role-master-filter.component';
 
 @Component({
   selector: 'app-role-master-listing',
@@ -21,7 +23,13 @@ export class RoleMasterListingComponent implements OnInit {
 
   selection = new SelectionModel<PeriodicElement>(true, []);
 
-  constructor() {}
+  openDialog() {
+    this.dialog.open(RoleMasterFilterComponent, {
+      width: '900px',
+      data: {},
+    });
+  }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
 

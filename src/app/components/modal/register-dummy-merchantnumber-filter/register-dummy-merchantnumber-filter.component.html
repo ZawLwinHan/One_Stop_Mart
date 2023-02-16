@@ -9,7 +9,7 @@
       <div class="row rowMargin mt-3">
         <div class="col-md-6">
           <div>
-            <label for="">User Name</label>
+            <label for="">Company Name</label>
           </div>
           <br />
           <div fxLayout="row wrap">
@@ -54,16 +54,19 @@
                   All
                 </button>
               </div>
-              <mat-option value="1">username001</mat-option>
-              <mat-option value="1">username002</mat-option>
-              <mat-option value="1">username003</mat-option>
-              <mat-option value="1">username004</mat-option>
+              <mat-option value="1">Internet Wallet Myanmar</mat-option>
+              <mat-option value="2">One Stop Mart Insein</mat-option>
+              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
+              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
+              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
+              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
+              <mat-option value="4">One Stop Mart North Dagon</mat-option>
             </mat-select>
           </div>
         </div>
         <div class="col-md-6">
           <div>
-            <label for="">Name</label>
+            <label for="">Dummy Merchant Name</label>
           </div>
           <br />
           <div fxLayout="row wrap">
@@ -120,7 +123,7 @@
       <div class="row rowMargin mt-3">
         <div class="col-md-6">
           <div>
-            <label for="">Mobile Number</label>
+            <label for="">Dummy Merchant Number</label>
           </div>
           <br />
           <div fxLayout="row wrap">
@@ -174,7 +177,7 @@
         </div>
         <div class="col-md-6">
           <div>
-            <label for="">Company Name</label>
+            <label for="">Advance Merchant Number</label>
           </div>
           <br />
           <div fxLayout="row wrap">
@@ -219,13 +222,10 @@
                   All
                 </button>
               </div>
-              <mat-option value="1">Internet Wallet Myanmar</mat-option>
-              <mat-option value="2">One Stop Mart Insein</mat-option>
-              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
-              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
-              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
-              <mat-option value="3">One Stop Mart Tarmwe</mat-option>
-              <mat-option value="4">One Stop Mart North Dagon</mat-option>
+              <mat-option value="1">+95 0942097981</mat-option>
+              <mat-option value="2">+95 0979097291</mat-option>
+              <mat-option value="3">+95 0997097213</mat-option>
+              <mat-option value="4">+95 0942097981</mat-option>
             </mat-select>
           </div>
         </div>
@@ -234,7 +234,7 @@
       <div class="row rowMargin mt-3">
         <div class="col-md-6">
           <div>
-            <label for="">User Email</label>
+            <label for="">Father Name</label>
           </div>
           <br />
           <div fxLayout="row wrap">
@@ -279,16 +279,73 @@
                   All
                 </button>
               </div>
-              <mat-option value="1">aungmyo@gmail.com</mat-option>
-              <mat-option value="2">shwesin@gmail.com</mat-option>
-              <mat-option value="3">myomin@gmail.com</mat-option>
-              <mat-option value="4">maungmaung@gmail.com</mat-option>
+              <mat-option value="1">U Myo</mat-option>
+              <mat-option value="2">U Ye Naing</mat-option>
+              <mat-option value="3">U Aung Ko</mat-option>
+              <mat-option value="4">U Tin Tun</mat-option>
             </mat-select>
           </div>
         </div>
         <div class="col-md-6">
           <div>
-            <label for="">User Type</label>
+            <label for="">Father Name</label>
+          </div>
+          <br />
+          <div fxLayout="row wrap">
+            <mat-select
+              class="select2"
+              multiple
+              disableOptionCentering
+              panelClass="myPanelClass"
+              placeholder="Select"
+            >
+              <div
+                fxLayout="row"
+                fxLayout.xs="column"
+                fxLayoutAlign.xs="start start"
+                class="filter_select_header"
+                fxLayoutAlign="space-between center"
+              >
+                <div
+                  fxLayout="row"
+                  fxLayoutAlign="center center"
+                  class="filter_text"
+                >
+                  <!-- <mat-label class="label">Filter:</mat-label> -->
+                  <mat-form-field appearance="standard">
+                    <input
+                      matInput
+                      class="select_search_box"
+                      placeholder="Enter Keywords"
+                    />
+                  </mat-form-field>
+                </div>
+                <button fxLayout="row" mat-button class="check_uncheck_btn">
+                  <mat-icon class="secondary-text s-5"> check</mat-icon>Check
+                  All
+                </button>
+                <button
+                  fxLayout="row"
+                  mat-button
+                  class="check_uncheck_btn v-line"
+                >
+                  <mat-icon class="secondary-text s-5"> clear</mat-icon>Uncheck
+                  All
+                </button>
+              </div>
+              <mat-option value="1">Phone Shop</mat-option>
+              <mat-option value="2">Bank</mat-option>
+              <mat-option value="3">Wholesales</mat-option>
+              <mat-option value="4">Convenience Store</mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row rowMargin mt-3">
+        <div class="col-md-6">
+          <div>
+            <label for="">Status</label>
           </div>
           <br />
           <mat-select
@@ -297,8 +354,8 @@
             panelClass="myPanelClass1"
             placeholder="Select"
           >
-            <mat-option value="1">Admin</mat-option>
-            <mat-option value="2">User</mat-option>
+            <mat-option value="1">Checking</mat-option>
+            <mat-option value="2">Register</mat-option>
           </mat-select>
         </div>
       </div>
