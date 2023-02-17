@@ -53,7 +53,7 @@ mat-label span {
 }
 .main-content {
   background-color: #ffff !important;
-  height: calc(82vh - 60px);
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -104,6 +104,9 @@ input[type="checkbox"] {
   .upload {
     font-size: 18px;
     margin-top: 3px;
+  }
+  .main-content {
+    height: calc(80vh - 60px);
   }
 }
 .checkbox-group {
