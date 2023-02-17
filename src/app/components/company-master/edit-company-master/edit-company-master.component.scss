@@ -53,7 +53,7 @@ mat-label span {
 }
 .main-content {
   background: #ffff !important;
-  height: calc(82vh - 60px);
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -136,4 +136,9 @@ input[type="checkbox"] {
   border: solid #06226c;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+@media screen and (max-width: 1551px) {
+  .main-content {
+    height: calc(80vh - 60px);
+  }
 }

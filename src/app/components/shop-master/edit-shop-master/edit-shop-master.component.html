@@ -1,6 +1,14 @@
-<div class="p-2">
-    <h4>Edit Shop Master</h4>
-    <div class="main-content p-3">
+<div class="p-3">
+  <div class="row">
+    <div
+      class="py-3 d-block d-md-flex justify-content-between align-items-center"
+    >
+      <div class="breadcrumbText">
+        <span>Edit Shop Master</span>
+      </div>
+    </div>
+  </div>
+    <div class="main-content bg-white container-fluid p-3">
        
         <div class="row">
               <div class="my-2 col-12 col-md-6 col-lg-4 ">
@@ -52,7 +60,7 @@
                 <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
                       &nbsp;<span style="font-size: 14px">+95</span>
                     </span>
-                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 75% !important;">
+                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 72% !important;">
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
@@ -183,11 +191,21 @@
             </div>
           </div>
     </div>
+
+    <mat-toolbar>
+      <div class="button_group pt-3" style="line-height: 20px">
+        <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">
+          Cancel
+        </button>
+        <button
+          class="saveandsend m-0"
+          mat-button
+          [routerLink]="'../../ShopMaster'"
+        >
+          Save & Send For Approval
+        </button>
+      </div>
+    </mat-toolbar>
 </div>
-<mat-toolbar>
-    <div class="button_group">
-      <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">Cancel</button>
-      <button class="saveandsend" mat-button  [routerLink]="'../../ShopMaster'">Save & Send For Approval</button>
-    </div>
-</mat-toolbar>
+
   

@@ -53,7 +53,12 @@ mat-label span {
 }
 .main-content {
   background-color: #fff !important;
-  height: calc(82vh - 60px);
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
+}
+@media screen and (max-width: 1551px) {
+  .main-content {
+    height: calc(80vh - 60px);
+  }
 }

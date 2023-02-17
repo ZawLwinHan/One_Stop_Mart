@@ -52,7 +52,7 @@ mat-label span {
   color: #000;
 }
 .main-content {
-  height: calc(82vh - 60px);
+  height: calc(84vh - 60px);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -92,4 +92,10 @@ input[type="checkbox"] {
 
 .main-content {
   background: #ffff !important;
+}
+
+@media screen and (max-width: 1551px) {
+  .main-content {
+    height: calc(80vh - 60px);
+  }
 }
