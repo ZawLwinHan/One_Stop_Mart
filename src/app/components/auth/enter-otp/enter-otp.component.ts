@@ -9,7 +9,7 @@ export class EnterOtpComponent implements OnInit {
 
   @Output() otp_cancelEvent = new EventEmitter<any>();
   @Output() otp_submitEvent = new EventEmitter<any>();
-  @Input() coutDownSecounds!: number;
+  @Input() countDownSeconds!: number;
   timeLeft: number = 10;
   interval: any;
   isTimeUp: boolean = false;
@@ -34,10 +34,10 @@ export class EnterOtpComponent implements OnInit {
   }
 
   startTimer() {
-    var time = this.coutDownSecounds;
+    var time = this.countDownSeconds;
     var initialOffset = 440;
     var i = 1
-    var j = this.coutDownSecounds;
+    var j = this.countDownSeconds;
 
   /* Need initial run as interval hasn't yet occured... */
   $('.circle_animation').css('stroke-dashoffset', (initialOffset)-(1*(initialOffset/time)));
@@ -49,7 +49,7 @@ export class EnterOtpComponent implements OnInit {
      clearInterval(interval);
  		return;
   }
-    
+
    $('.circle_animation').css('stroke-dashoffset', initialOffset-((i+1)*(initialOffset/time)));
    i++;
    j--;
@@ -60,5 +60,5 @@ export class EnterOtpComponent implements OnInit {
     clearInterval(this.interval);
   }
 
-  
+
 }

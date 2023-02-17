@@ -11,17 +11,26 @@ export class LoginComponent implements OnInit {
 
   showPassword = false;
   login_form!: FormGroup;
+  otp_form!: FormGroup;
   hide = true;
+  timeStart : boolean = false;
   otp_page : boolean = false;
+  showOtpBtn : boolean = true;
+  time : number = 5;
+
   constructor( private route: Router,private _formBuilder: FormBuilder, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.otp_form = this._formBuilder.group({});
     this.login_form = this._formBuilder.group({
       user_name: ["", Validators.required],
       password: ["", Validators.required],
     });
   }
-
+  startCount(){
+    this.showOtpBtn = false
+    this.timeStart = true
+  }
   login(){
     if (this.login_form.invalid) {
       this._snackBar.open('Username and Password required', 'Ok', {
