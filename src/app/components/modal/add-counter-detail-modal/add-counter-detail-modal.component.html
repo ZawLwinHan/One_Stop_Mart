@@ -96,7 +96,7 @@
       </div>
 
       <div class="row">
-            <div class="my-2 col-12 col-md-6 col-lg-6 ">
+        <div class="my-2 col-12 col-md-6 col-lg-6 ">
               <div>
                 <mat-label for="">Pay With OK$ Number<span>*</span></mat-label>
               </div>
@@ -112,17 +112,15 @@
                 </div>
                 <mat-option *ngFor="let  ampaywithokdollarno of ampaywithokdollarnumbers" [value]="ampaywithokdollarno">{{ampaywithokdollarno}}</mat-option>
               </mat-select>
-            </div>
-          
-            <div class="my-2 col-12 col-md-6 col-lg-6">
+        </div> 
+        <div class="my-2 col-12 col-md-6 col-lg-6">
               <br>
               <mat-form-field floatLabel="always" class="changePswrd-input">
                 <mat-label class="label-input">Pay With OK$ Account Password</mat-label>
                 <input matInput type="{{hide? 'password' : 'text'}}" class="input1" placeholder="Pay With OK$ Account Password">
                 <mat-icon matSuffix  (click)="reveal()" class="pointer eye-icon">{{hide1? 'visibility_off' : 'visibility'}}</mat-icon>
-    
               </mat-form-field>
-            </div>
+        </div>
       </div>
       </div>
     </mat-dialog-content>

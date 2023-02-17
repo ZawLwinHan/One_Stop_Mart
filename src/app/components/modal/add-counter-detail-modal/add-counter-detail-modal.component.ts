@@ -27,5 +27,4 @@ export class AddCounterDetailModalComponent   {
   reveal(){
     this.hide = !this.hide
   }
-
 }
