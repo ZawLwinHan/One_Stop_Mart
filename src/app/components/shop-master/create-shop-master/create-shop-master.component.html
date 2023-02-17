@@ -1,274 +1,389 @@
 <div class="p-3">
-    <h4>Create Shop Master</h4>
-    <div class="main-content p-3">
-       
-        <div class="row">
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <div>
-                  <mat-label for="">Select Company Name<span>*</span></mat-label>
-                </div>
-                <br>
-                <mat-select class="select2" disableOptionCentering panelClass="myPanelClass1" placeholder="Select">
-                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                    fxLayoutAlign="space-between center">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                      <mat-form-field appearance="standard">
-                        <input matInput class="select_search_box" placeholder="Enter Keywords">
-                      </mat-form-field>
-                    </div>
-                  </div>
-                  <mat-option *ngFor="let companyname of companynames" [value]="companyname">{{companyname}}</mat-option>
-                </mat-select>
-              </div>
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <br>
-                <mat-form-field floatLabel="always">
-                    <mat-label class="label-input">Shop Code<span>*</span></mat-label>
-                    <input matInput class="input1" placeholder="Enter Shop Code">
-                </mat-form-field>
-              </div>
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <br>
-                <mat-form-field floatLabel="always">
-                    <mat-label class="label-input">Shop Name<span>*</span></mat-label>
-                    <input matInput class="input1" placeholder="Enter Shop Name">
-                </mat-form-field>
-              </div>
+  <h4>Create Shop Master</h4>
+  <div class="main-content p-3">
+    <div class="row">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div>
+          <mat-label for="">Select Company Name<span>*</span></mat-label>
         </div>
-
-        <div class="row">
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <br>
-              <mat-form-field floatLabel="always">
-                  <mat-label class="label-input">Transaction Amount Limit<span>*</span></mat-label>
-                  <input matInput class="input1" placeholder="Enter Transaction Amount">
+        <br />
+        <mat-select
+          class="select2"
+          disableOptionCentering
+          panelClass="myPanelClass1"
+          placeholder="Select"
+        >
+          <div
+            fxLayout="row"
+            fxLayout.xs="column"
+            fxLayoutAlign.xs="start start"
+            class="filter_select_header"
+            fxLayoutAlign="space-between center"
+          >
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              class="filter_text filterRow"
+            >
+              <mat-form-field appearance="standard">
+                <input
+                  matInput
+                  class="select_search_box"
+                  placeholder="Enter Keywords"
+                />
               </mat-form-field>
             </div>
-            
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <br>
-              <mat-form-field floatLabel="always">
-                <mat-label class="label-input">Contact Number<span>*</span></mat-label>
-                <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
-                      &nbsp;<span style="font-size: 14px">+95</span>
-                    </span>
-                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 72% !important;">
-                <mat-icon matSuffix></mat-icon>
-              </mat-form-field>
-            </div>
-
-            <div class="my-2 col-12 col-md-6 col-lg-4 ">
-              <div>
-                <mat-label for="">State/Division<span>*</span></mat-label>
-              </div>
-              <br>
-              <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-                
-                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                  fxLayoutAlign="space-between center">
-                  <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                    <mat-form-field appearance="standard">
-                      <input matInput class="select_search_box" placeholder="Enter Keywords">
-                    </mat-form-field>
-                  </div>
-                  <button fxLayout="row" mat-button class="check_uncheck_btn">
-                    <mat-icon class="secondary-text s-5">
-                      check</mat-icon>Check All
-                  </button>
-                  <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
-                    <mat-icon class="secondary-text s-5">
-                      clear</mat-icon>Uncheck All
-                  </button>
-                </div>
-                <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
-
-               
-              </mat-select>
-            </div>
-        </div>
-
-        <div class="row">
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <div>
-                  <mat-label for="">City<span>*</span></mat-label>
-                </div>
-                <br>
-                <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                    fxLayoutAlign="space-between center">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                      <mat-form-field appearance="standard">
-                        <input matInput class="select_search_box" placeholder="Enter Keywords">
-                      </mat-form-field>
-                    </div>
-                    <button fxLayout="row" mat-button class="check_uncheck_btn">
-                      <mat-icon class="secondary-text s-5">
-                        check</mat-icon>Check All
-                    </button>
-                    <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
-                      <mat-icon class="secondary-text s-5">
-                        clear</mat-icon>Uncheck All
-                    </button>
-                  </div>
-                  <mat-option *ngFor="let city of cities" [value]="city">{{city}}</mat-option>
-
-                 
-                </mat-select>
-              </div>
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <div>
-                  <mat-label for="">Township<span>*</span></mat-label>
-                </div>
-                <br>
-                <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-                  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
-                    fxLayoutAlign="space-between center">
-                    <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
-                      <mat-form-field appearance="standard">
-                        <input matInput class="select_search_box" placeholder="Enter Keywords">
-                      </mat-form-field>
-                    </div>
-                    <button fxLayout="row" mat-button class="check_uncheck_btn">
-                      <mat-icon class="secondary-text s-5">
-                        check</mat-icon>Check All
-                    </button>
-                    <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
-                      <mat-icon class="secondary-text s-5">
-                        clear</mat-icon>Uncheck All
-                    </button>
-                  </div>
-                  <mat-option *ngFor="let township  of townships" [value]="township">{{township}}</mat-option>
-
-                </mat-select>
-              </div>
-              <div class="my-2 col-12 col-md-6 col-lg-4 ">
-                <br>
-                <mat-form-field floatLabel="always">
-                    <mat-label class="label-input">Enter Road<span>*</span></mat-label>
-                    <input matInput class="input1" placeholder="Enter Road">
-                </mat-form-field>
-              </div>
-        </div>
-
-        <div class="row">
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <br>
-            <mat-form-field floatLabel="always">
-                <mat-label class="label-input">Address<span>*</span></mat-label>
-                <input matInput class="input1" placeholder="Enter Address">
-            </mat-form-field>
           </div>
-
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <br>
-            <mat-form-field floatLabel="always">
-                <mat-label class="label-input">Enter Lattitude<span>*</span></mat-label>
-                <input matInput class="input1" placeholder="Enter Lattitude">
-            </mat-form-field>
-          </div>
-          <div class="my-2 col-12 col-md-6 col-lg-4 ">
-            <br>
-            <mat-form-field floatLabel="always">
-                <mat-label class="label-input">Enter Longitude<span>*</span></mat-label>
-                <input matInput class="input1" placeholder="Enter Longitude">
-            </mat-form-field>
-          </div>
-        </div>
-
-        <div class="btn btn-primary saveandsend" (click)="openDialog()">
-          <img src="../../../../assets/img/icon/AddCounterDetail.svg" alt="" class="add-btn">
-         Add Counter Detail
-        </div> 
-        
-        <div class="row table-pagination" >
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-            <ng-container matColumnDef="action">
-              <th mat-header-cell *matHeaderCellDef>  </th>
-              <td mat-cell *matCellDef="let element" class="p-0 me-2">
-                <a routerLink="./edit-user-role-permission" matTooltip="Edit"
-                   aria-label="Button that displays a tooltip when focused or hovered over">
-                  <img class="actionImage" [src]="element.action" />
-                </a>
-                <a href="#" matTooltip="Delete" class="d-inline-block ms-2"
-                   aria-label="Button that displays a tooltip when focused or hovered over">
-                  <img class="actionImage" src="assets/img/icon/delete-pattern.svg" />
-                </a>
-              </td>
-            </ng-container>
-
-            <ng-container matColumnDef="counterNo">
-              <th mat-header-cell *matHeaderCellDef>Counter No.</th>
-              <td mat-cell *matCellDef="let element"> {{element.counterNo}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="counterName">
-              <th mat-header-cell *matHeaderCellDef> Counter Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.counterName}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="cashoutNo">
-              <th mat-header-cell *matHeaderCellDef> Cash Out Number </th>
-              <td mat-cell *matCellDef="let element"> {{element.cashoutNo}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="paywithokNo">
-              <th mat-header-cell *matHeaderCellDef>Pay With OK$ Number </th>
-              <td mat-cell *matCellDef="let element"> {{element.paywithokNo}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="view">
-              <th mat-header-cell *matHeaderCellDef> Assign Backend </th>
-              <td mat-cell *matCellDef="let element"> <img class="actionImage" [src]="element.view" (click)="openDialog2()" /> </td>
-            </ng-container>
-    
-    
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </div>
-
-        <div class="row mt-2 my-2 table-pagination margin-left">
-          <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
-            <ng-container matColumnDef="transtype">
-              <th mat-header-cell *matHeaderCellDef >Transaction Type</th>
-              <td mat-cell *matCellDef="let element"> {{element.transtype}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="mobileNo">
-              <th mat-header-cell *matHeaderCellDef>Mobile Number</th>
-              <td mat-cell *matCellDef="let element"> {{element.mobileNo}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="backendNo">
-              <th mat-header-cell *matHeaderCellDef>Backend Number </th>
-              <td mat-cell *matCellDef="let element"> {{element.backendNo}} </td>
-            </ng-container>
-    
-            <ng-container matColumnDef="registeredName">
-              <th mat-header-cell *matHeaderCellDef>Registered Name</th>
-              <td mat-cell *matCellDef="let element"> {{element.registeredName}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="Name">
-              <th mat-header-cell *matHeaderCellDef> Name</th>
-              <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
-            </ng-container>
-            <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
-          </table>
-        </div>
-
-        
+          <mat-option
+            *ngFor="let companyname of companynames"
+            [value]="companyname"
+            >{{ companyname }}</mat-option
+          >
+        </mat-select>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Shop Code<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Shop Code" />
+        </mat-form-field>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Shop Name<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Shop Name" />
+        </mat-form-field>
+      </div>
     </div>
-</div>
 
-<mat-toolbar>
-  <div class="button_group py-2" style="line-height: 20px">
-    <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">
-      Cancel
-    </button>
-    <button class="saveandsend m-0" mat-button [routerLink]="'../../ShopMaster'">
-      Save & Send For Approval
-    </button>
+    <div class="row">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
+            >Transaction Amount Limit<span>*</span></mat-label
+          >
+          <input
+            matInput
+            class="input1"
+            placeholder="Enter Transaction Amount"
+          />
+        </mat-form-field>
+      </div>
+
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
+            >Contact Number<span>*</span></mat-label
+          >
+          <span
+            class="country-flag mobileInput"
+            matPrefix
+            style="display: flex; vertical-align: baseline"
+          >
+            &nbsp;<span style="font-size: 14px">+95</span>
+          </span>
+          <input
+            matInput
+            class="input1 paddingBottom-2"
+            placeholder="09XXXXXXXXX"
+            style="padding-left: 50px !important; width: 72% !important"
+          />
+          <mat-icon matSuffix></mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div>
+          <mat-label for="">State/Division<span>*</span></mat-label>
+        </div>
+        <br />
+        <mat-select
+          class="select2"
+          multiple
+          disableOptionCentering
+          panelClass="myPanelClass"
+          placeholder="Select"
+        >
+          <div
+            fxLayout="row"
+            fxLayout.xs="column"
+            fxLayoutAlign.xs="start start"
+            class="filter_select_header"
+            fxLayoutAlign="space-between center"
+          >
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              class="filter_text filterRow"
+            >
+              <mat-form-field appearance="standard">
+                <input
+                  matInput
+                  class="select_search_box"
+                  placeholder="Enter Keywords"
+                />
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5"> check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5"> clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option *ngFor="let state of states" [value]="state">{{
+            state
+          }}</mat-option>
+        </mat-select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div>
+          <mat-label for="">City<span>*</span></mat-label>
+        </div>
+        <br />
+        <mat-select
+          class="select2"
+          multiple
+          disableOptionCentering
+          panelClass="myPanelClass"
+          placeholder="Select"
+        >
+          <div
+            fxLayout="row"
+            fxLayout.xs="column"
+            fxLayoutAlign.xs="start start"
+            class="filter_select_header"
+            fxLayoutAlign="space-between center"
+          >
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              class="filter_text filterRow"
+            >
+              <mat-form-field appearance="standard">
+                <input
+                  matInput
+                  class="select_search_box"
+                  placeholder="Enter Keywords"
+                />
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5"> check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5"> clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option *ngFor="let city of cities" [value]="city">{{
+            city
+          }}</mat-option>
+        </mat-select>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <div>
+          <mat-label for="">Township<span>*</span></mat-label>
+        </div>
+        <br />
+        <mat-select
+          class="select2"
+          multiple
+          disableOptionCentering
+          panelClass="myPanelClass"
+          placeholder="Select"
+        >
+          <div
+            fxLayout="row"
+            fxLayout.xs="column"
+            fxLayoutAlign.xs="start start"
+            class="filter_select_header"
+            fxLayoutAlign="space-between center"
+          >
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              class="filter_text filterRow"
+            >
+              <mat-form-field appearance="standard">
+                <input
+                  matInput
+                  class="select_search_box"
+                  placeholder="Enter Keywords"
+                />
+              </mat-form-field>
+            </div>
+            <button fxLayout="row" mat-button class="check_uncheck_btn">
+              <mat-icon class="secondary-text s-5"> check</mat-icon>Check All
+            </button>
+            <button fxLayout="row" mat-button class="check_uncheck_btn v-line">
+              <mat-icon class="secondary-text s-5"> clear</mat-icon>Uncheck All
+            </button>
+          </div>
+          <mat-option *ngFor="let township of townships" [value]="township">{{
+            township
+          }}</mat-option>
+        </mat-select>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Enter Road<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Road" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input">Address<span>*</span></mat-label>
+          <input matInput class="input1" placeholder="Enter Address" />
+        </mat-form-field>
+      </div>
+
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
+            >Enter Lattitude<span>*</span></mat-label
+          >
+          <input matInput class="input1" placeholder="Enter Lattitude" />
+        </mat-form-field>
+      </div>
+      <div class="my-2 col-12 col-md-6 col-lg-4">
+        <br />
+        <mat-form-field floatLabel="always">
+          <mat-label class="label-input"
+            >Enter Longitude<span>*</span></mat-label
+          >
+          <input matInput class="input1" placeholder="Enter Longitude" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="btn btn-primary saveandsend" (click)="openDialog()">
+      <img
+        src="../../../../assets/img/icon/AddCounterDetail.svg"
+        alt=""
+        class="add-btn"
+      />
+      Add Counter Detail
+    </div>
+
+    <div class="row table-pagination">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element" class="p-0 me-2">
+            <a
+              routerLink="./edit-user-role-permission"
+              matTooltip="Edit"
+              aria-label="Button that displays a tooltip when focused or hovered over"
+            >
+              <img class="actionImage" [src]="element.action" />
+            </a>
+            <a
+              href="#"
+              matTooltip="Delete"
+              class="d-inline-block ms-2"
+              aria-label="Button that displays a tooltip when focused or hovered over"
+            >
+              <img
+                class="actionImage"
+                src="assets/img/icon/delete-pattern.svg"
+              />
+            </a>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="counterNo">
+          <th mat-header-cell *matHeaderCellDef>Counter No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.counterNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="counterName">
+          <th mat-header-cell *matHeaderCellDef>Counter Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.counterName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="cashoutNo">
+          <th mat-header-cell *matHeaderCellDef>Cash Out Number</th>
+          <td mat-cell *matCellDef="let element">{{ element.cashoutNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="paywithokNo">
+          <th mat-header-cell *matHeaderCellDef>Pay With OK$ Number</th>
+          <td mat-cell *matCellDef="let element">{{ element.paywithokNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="view">
+          <th mat-header-cell *matHeaderCellDef>Assign Backend</th>
+          <td mat-cell *matCellDef="let element">
+            <img
+              class="actionImage"
+              [src]="element.view"
+              (click)="openDialog2()"
+            />
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+
+    <div class="row mt-2 my-2 table-pagination margin-left">
+      <table mat-table [dataSource]="dataSource1" class="mat-elevation-z8">
+        <ng-container matColumnDef="transtype">
+          <th mat-header-cell *matHeaderCellDef>Transaction Type</th>
+          <td mat-cell *matCellDef="let element">{{ element.transtype }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="mobileNo">
+          <th mat-header-cell *matHeaderCellDef>Mobile Number</th>
+          <td mat-cell *matCellDef="let element">{{ element.mobileNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="backendNo">
+          <th mat-header-cell *matHeaderCellDef>Backend Number</th>
+          <td mat-cell *matCellDef="let element">{{ element.backendNo }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="registeredName">
+          <th mat-header-cell *matHeaderCellDef>Registered Name</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.registeredName }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.Name }}</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
+      </table>
+    </div>
   </div>
-</mat-toolbar>
+  <mat-toolbar>
+    <div class="button_group pt-3" style="line-height: 20px">
+      <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">
+        Cancel
+      </button>
+      <button
+        class="saveandsend m-0"
+        mat-button
+        [routerLink]="'../../ShopMaster'"
+      >
+        Save & Send For Approval
+      </button>
+    </div>
+  </mat-toolbar>
+</div>
