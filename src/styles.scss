@@ -998,7 +998,7 @@ header {
 }
 @media screen and (max-width: 1551px) {
   .secondary-table-pagination {
-    height: calc(80vh - 120px) !important;
+    height: calc(88vh - 120px) !important;
   }
   .eye-icon {
     right: 52px !important;
@@ -1020,13 +1020,13 @@ table {
 }
 
 .secondary-table-pagination {
-  height: calc(82vh - 120px);
+  height: calc(91vh - 120px);
   overflow: auto;
 }
 
 // .secondary-table-pagination td{border: 1px solid $primary-light;
 // }
-.secondary-table-pagination th{
+.secondary-table-pagination th {
   border-bottom: 10px solid #f1f5ff;
 }
 .secondary-table-pagination td {
@@ -1169,18 +1169,18 @@ bs-datepicker-container,
 bs-daterangepicker-container {
   left: 110px !important;
 }
-.main-content{
+.main-content {
   background: #f1f5ff !important;
 }
-.filter_select_header{
+.filter_select_header {
   background: $primary !important;
-  color:white;
+  color: white;
 }
 tr.mat-header-row {
   border-bottom: 8px solid #f1f5ff;
 }
 
-@media screen and (max-width: 1551px){
+@media screen and (max-width: 1551px) {
   .input1 {
     width: 77% !important;
   }
