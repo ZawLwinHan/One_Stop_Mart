@@ -20,7 +20,7 @@ export class ShopMasterListingComponent  implements AfterViewInit {
   constructor(public dialog: MatDialog) { }
   openDialog() {
     this.dialog.open(ShopMasterFilterComponent, {
-      width: '1000px',
+      width: '700px',
       data: {}
     });
   }

@@ -46,7 +46,7 @@ export class CreateShopMasterComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
   openDialog() {
     this.dialog.open(AddCounterDetailModalComponent, {
-      width: '1000px',
+      width: '800px',
       data: {}
     });
   }

@@ -52,7 +52,7 @@
                 <span class="country-flag mobileInput" matPrefix style="display: flex; vertical-align: baseline;">
                       &nbsp;<span style="font-size: 14px">+95</span>
                     </span>
-                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 75% !important;">
+                <input matInput class="input1 paddingBottom-2" placeholder="09XXXXXXXXX" style="padding-left: 50px !important;width: 72% !important;">
                 <mat-icon matSuffix></mat-icon>
               </mat-form-field>
             </div>
@@ -185,9 +185,13 @@
     </div>
 </div>
 <mat-toolbar>
-    <div class="button_group">
-      <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">Cancel</button>
-      <button class="saveandsend" mat-button  [routerLink]="'../../ShopMaster'">Save & Send For Approval</button>
-    </div>
+  <div class="button_group py-2" style="line-height: 20px">
+    <button class="noBtn" mat-button [routerLink]="'../../ShopMaster'">
+      Cancel
+    </button>
+    <button class="saveandsend m-0" mat-button [routerLink]="'../../ShopMaster'">
+      Save & Send For Approval
+    </button>
+  </div>
 </mat-toolbar>
   
