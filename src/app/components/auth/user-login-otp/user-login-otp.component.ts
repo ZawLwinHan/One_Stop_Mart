@@ -13,8 +13,14 @@ export class UserLoginOtpComponent implements OnInit {
   timeLeft: number = 10;
   interval: any;
   isTimeUp: boolean = false;
-
+  timeStart : boolean = false;
+  showOtpBtn : boolean = true;
   constructor() { }
+
+  startCount(){
+    this.showOtpBtn = false
+    this.timeStart = true
+  }
 
   ngOnInit(): void {
     this.startTimer();

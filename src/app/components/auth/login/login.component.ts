@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   timeStart : boolean = false;
   otp_page : boolean = false;
   showOtpBtn : boolean = true;
-  time : number = 5;
 
   constructor( private route: Router,private _formBuilder: FormBuilder, private _snackBar: MatSnackBar) { }
 

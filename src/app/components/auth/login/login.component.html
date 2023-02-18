@@ -40,34 +40,7 @@
 
             <!--OTP PAGE-->
             <form action="" *ngIf="otp_page" >
-              <div class="login-wrapper">
-                <div class="otp_section">
-                    <app-user-login-otp (otp_cancelEvent)="otp_page=false" *ngIf="timeStart" [countDownSeconds]="time" ></app-user-login-otp>
-                </div>
-                <div class="d-flex position-relative">
-                  <input type="text" readonly value="+95 09421052949" class="text-white-50"  autocomplete="off" cdkAutofill="off">
-                  <div class="input_image_box">
-                    <img src="../../../../assets/img/icon/Phone.svg" alt="" style="width: 20px;">
-                  </div>
-                </div>
-                <div class="position-relative text-center" style="margin-top: 45px;">
-                  <div class="input_image_box">
-                    <img src="" alt="" style="width: 20px;">
-                  </div>
-
-                  <input type="text" placeholder="Enter OTP" autocomplete="off" />
-                  <div class="input_image_box">
-                    <img src="../../../../assets/img/icon/password.svg" alt="" style="width: 20px;">
-                  </div>
-                </div>
-                <small class="text-white">Enter OTP Received vis SMS on your registered mobile number</small>
-
-                <div style="text-align: center;margin-top: 20px;">
-                  <button type="submit" class="login_btn" (click)="startCount()" *ngIf="showOtpBtn">GET OTP</button>
-                  <button type="submit" class="login_btn" *ngIf="timeStart">SUBMIT</button>
-                  <button type="submit" class="login_btn" *ngIf="time? 0:'' ">GET NEW OTP</button>
-                </div>
-              </div>
+              <app-user-login-otp [countDownSeconds]="60"></app-user-login-otp>
             </form>
           </div>
       </div>
