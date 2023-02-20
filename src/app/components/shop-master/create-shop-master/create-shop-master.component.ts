@@ -20,7 +20,7 @@ export interface PeriodicElement1 {
   backendNo  : string;
   registeredName  : string;
   Name: string;
-  
+
 }
 const ELEMENT_DATA: PeriodicElement[] = [
   {action:'assets/img/icon/Edit.svg',counterNo:'0054', counterName: '0054 Myint Thar',cashoutNo:'+95 0955831 5856', paywithokNo: '+95 09 123 456 78',
@@ -30,7 +30,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 const ELEMENT_DATA1: PeriodicElement1[] = [
   { transtype: 'CASH IN',mobileNo:'(CASH IN)+95 0955831 5856', backendNo: '(CASH IN)+95 09 123 456 78',registeredName:'(CASH IN)+95 09 123 456 78',Name:'Aung Myo'
- 
+
   }
 ];
 
@@ -44,17 +44,33 @@ export class CreateShopMasterComponent implements OnInit {
   hide=true;
 
   constructor(public dialog: MatDialog) { }
+
+  showFirstTable:boolean = true;
+  showSecondTable:boolean = true;
+
   openDialog() {
-    this.dialog.open(AddCounterDetailModalComponent, {
+    const dialogRef = this.dialog.open(AddCounterDetailModalComponent, {
       width: '800px',
-      data: {}
+      data: {
+        show: this.showFirstTable
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.showFirstTable = result
     });
   }
 
   openDialog2() {
-    this.dialog.open(AssignBackendModalComponent, {
+    const dialogRef = this.dialog.open(AssignBackendModalComponent, {
       width: '800px',
-      data: {}
+      data: {
+        show1: this.showFirstTable
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.showSecondTable = result
     });
   }
 
@@ -66,7 +82,7 @@ export class CreateShopMasterComponent implements OnInit {
 
   dataSource = ELEMENT_DATA;
   dataSource1 = ELEMENT_DATA1;
-  
+
   companynames: string[] = ['Consumer Goods Myanmar limited', 'CGM Company Limited'];
   states: string[] = ['Yangon', 'Bago','Ayeyawady'];
   cities: string[] = ['Yangon', 'Bago','Ayeyawady'];

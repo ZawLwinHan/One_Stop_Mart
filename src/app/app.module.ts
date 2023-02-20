@@ -91,5 +91,8 @@ import { RegisterDummyMerchantnumberFilterComponent } from './components/modal/r
     },
   ],
   bootstrap: [AppComponent],
+  exports: [
+    RegisterUserFilterComponent
+  ]
 })
 export class AppModule {}

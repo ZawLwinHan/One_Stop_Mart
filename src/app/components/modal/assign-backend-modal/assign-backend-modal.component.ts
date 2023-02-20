@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormControl } from '@angular/forms';
 
@@ -8,6 +8,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./assign-backend-modal.component.scss']
 })
 export class AssignBackendModalComponent implements OnInit {
+  @Output() showTable = new EventEmitter<boolean>();
+
+  show():void {
+    this.showTable.emit(true);
+  }
 
   constructor(public dialogRef: MatDialogRef<AssignBackendModalComponent>) { }
 

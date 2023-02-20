@@ -25,7 +25,7 @@
               <mat-option *ngFor="let transtype of transtypes" [value]="transtype">{{transtype}}</mat-option>
             </mat-select>
         </div>
-            
+
         <div class="my-2 col-12 col-md-6 col-lg-6 ">
                 <div>
                   <mat-label for="">Backend Number</mat-label>
@@ -71,14 +71,13 @@
             </mat-form-field>
         </div>
       </div>
-      
-  
+
+
         <div class="button_group  text-center">
           <button class="noBtn" (click)="onDismiss()">Cancel</button>
-          <button class="saveBtn" (click)="onDismiss()">Save</button>
+          <button class="saveBtn" [mat-dialog-close]="show()">Save</button>
         </div>
-        
+
       </div>
     </mat-dialog-content>
   </div>
-  

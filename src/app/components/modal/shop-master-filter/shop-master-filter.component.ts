@@ -1,4 +1,4 @@
-import { Component,HostListener, ViewChild  , ViewEncapsulation } from '@angular/core';
+import {Component, EventEmitter, HostListener, Output, ViewChild, ViewEncapsulation} from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormControl } from '@angular/forms';
 @Component({
@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
 
 })
 export class ShopMasterFilterComponent {
- 
+
   constructor(public dialogRef: MatDialogRef<ShopMasterFilterComponent>) { }
 
   ngOnInit(): void {
@@ -19,6 +19,12 @@ export class ShopMasterFilterComponent {
 
   onDismiss(){
     this.dialogRef.close();
+  }
+
+  @Output() showTable = new EventEmitter<boolean>();
+
+  show():void {
+    this.showTable.emit(true);
   }
 
   companynames: string[] = ['One Stop Mart Insein', 'One Stop Mart Tarmwe','One Stop Mart North Dagon'];

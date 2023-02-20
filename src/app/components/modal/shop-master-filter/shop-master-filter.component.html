@@ -5,16 +5,16 @@
       <img src="assets/img/icon/x.svg" alt="" class="close" (click)="onDismiss()">
     </div>
     <mat-dialog-content class="mat-typography">
-      <div class="content_outer">  
+      <div class="content_outer">
       <div class="row">
- 
+
         <div class="my-2 col-12 col-md-6 col-lg-6 ">
           <div>
             <mat-label for="">Company Name</mat-label>
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -33,7 +33,7 @@
             </div>
             <mat-option *ngFor="let companyName of companynames" [value]="companyName">{{companyName}}</mat-option>
 
-           
+
           </mat-select>
         </div>
 
@@ -43,7 +43,7 @@
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -62,21 +62,21 @@
             </div>
             <mat-option *ngFor="let shopcode of shopcodes" [value]="shopcode">{{shopcode}}</mat-option>
 
-           
+
           </mat-select>
         </div>
-          
+
       </div>
 
       <div class="row">
- 
+
         <div class="my-2 col-12 col-md-6 col-lg-6 ">
           <div>
             <mat-label for="">Shop Name</mat-label>
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -95,7 +95,7 @@
             </div>
             <mat-option *ngFor="let shopName of shopnames" [value]="shopName">{{shopName}}</mat-option>
 
-           
+
           </mat-select>
         </div>
 
@@ -105,7 +105,7 @@
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -124,21 +124,21 @@
             </div>
             <mat-option *ngFor="let contactNumber of contactNumbers" [value]="contactNumber">{{contactNumber}}</mat-option>
 
-           
+
           </mat-select>
         </div>
-          
+
       </div>
 
       <div class="row">
- 
+
         <div class="my-2 col-12 col-md-6 col-lg-6 ">
           <div>
             <mat-label for="">Township</mat-label>
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -157,7 +157,7 @@
             </div>
             <mat-option *ngFor="let township of townships" [value]="township">{{township}}</mat-option>
 
-           
+
           </mat-select>
         </div>
 
@@ -167,7 +167,7 @@
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -186,10 +186,10 @@
             </div>
             <mat-option *ngFor="let noOfcounter of noOfcounters" [value]="noOfcounter">{{noOfcounter}}</mat-option>
 
-           
+
           </mat-select>
         </div>
-             
+
       </div>
 
       <div class="row">
@@ -199,7 +199,7 @@
           </div>
           <br>
           <mat-select class="select2" multiple disableOptionCentering panelClass="myPanelClass" placeholder="Select">
-            
+
             <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign.xs="start start" class="filter_select_header"
               fxLayoutAlign="space-between center">
               <div fxLayout="row" fxLayoutAlign="center center" class="filter_text filterRow">
@@ -218,17 +218,16 @@
             </div>
             <mat-option *ngFor="let totalUserNo of totalUserNumbers" [value]="totalUserNo">{{totalUserNo}}</mat-option>
 
-           
+
           </mat-select>
         </div>
-             
+
       </div>
       </div>
     </mat-dialog-content>
- 
+
     <div class="button_group m-3 text-center">
       <button class="noBtn" (click)="onDismiss()">Cancel</button>
-      <button class="apply" (click)="onDismiss()">Apply</button>
+      <button class="apply" [mat-dialog-close]="show()">Apply</button>
     </div>
   </div>
-  

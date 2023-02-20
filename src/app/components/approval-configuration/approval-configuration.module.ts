@@ -22,6 +22,8 @@ import { EditDeviceAuthorizationComponent } from './edit-device-authorization/ed
 import { TransactionAmountListComponent } from './transaction-amount-list/transaction-amount-list.component';
 import { CreateTransactionAmountComponent } from './create-transaction-amount/create-transaction-amount.component';
 import { EditTransactionAmountComponent } from './edit-transaction-amount/edit-transaction-amount.component';
+import {AuthModule} from "../auth/auth.module";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { EditTransactionAmountComponent } from './edit-transaction-amount/edit-t
     MatSelectModule,
     FlexModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    AuthModule,
+    MatDialogModule,
   ]
 })
 export class ApprovalConfigurationModule { }
