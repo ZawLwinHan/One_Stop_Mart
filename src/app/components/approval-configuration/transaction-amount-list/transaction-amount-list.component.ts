@@ -2,8 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import { MatPaginator } from '@angular/material/paginator';
 import {SelectionModel} from "@angular/cdk/collections";
-import {MatDialog} from "@angular/material/dialog";
-import {RegisterUserFilterComponent} from "../../modal/register-user-filter/register-user-filter.component";
 
 @Component({
   selector: 'app-transaction-amount-list',
@@ -21,14 +19,7 @@ export class TransactionAmountListComponent implements OnInit {
 
   selection = new SelectionModel<PeriodicElement>(true, []);
 
-  constructor(public dialog: MatDialog) { }
-  openDialog() {
-    this.dialog.open(RegisterUserFilterComponent, {
-      width: '900px',
-      data: {}
-    });
-  }
-
+  constructor() { }
 
   ngOnInit(): void {
   }

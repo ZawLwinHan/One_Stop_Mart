@@ -2,8 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import { MatPaginator } from '@angular/material/paginator';
 import {SelectionModel} from "@angular/cdk/collections";
-import {MatDialog} from "@angular/material/dialog";
-import {RegisterUserFilterComponent} from "../../modal/register-user-filter/register-user-filter.component";
 
 @Component({
   selector: 'app-device-authorization',
@@ -17,16 +15,9 @@ export class DeviceAuthorizationComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   selection = new SelectionModel<PeriodicElement>(true, []);
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  openDialog() {
-    this.dialog.open(RegisterUserFilterComponent, {
-      width: '900px',
-      data: {}
-    });
   }
 
   ngAfterViewInit() {
