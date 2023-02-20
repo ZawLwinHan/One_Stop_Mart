@@ -36,5 +36,5 @@ export class ForgotPasswordComponent implements OnInit {
   cancelOTP() {
     this.route.navigate(['/auth']);
   }
-
+  
 }

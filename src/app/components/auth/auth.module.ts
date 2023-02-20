@@ -14,17 +14,14 @@ import { OtpCircleComponent } from './otp-circle/otp-circle.component';
 import { UserLoginOtpComponent } from './user-login-otp/user-login-otp.component';
 
 @NgModule({
-    declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, ResetPasswordComponent, ResendOtpComponent, EnterOtpComponent, OtpCircleComponent, UserLoginOtpComponent],
-    exports: [
-        OtpCircleComponent
-    ],
-    imports: [
-        FormsModule,
-        ReactiveFormsModule,
-        CommonModule,
-        DemoMaterialModule,
-        AuthRoutingModule,
-        FlexLayoutModule,
-    ]
+  declarations: [LoginComponent, RegisterComponent, ForgotPasswordComponent, ResetPasswordComponent, ResendOtpComponent, EnterOtpComponent, OtpCircleComponent, UserLoginOtpComponent],
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    DemoMaterialModule,
+    AuthRoutingModule,
+    FlexLayoutModule,
+  ]
 })
 export class AuthModule { }
